@@ -2770,7 +2770,7 @@ body.no-scroll {
   font-weight: var(--fw-bold);
   line-height: 1.15;
   letter-spacing: -0.03em;
-  color: var(--bg-dark);
+  color: var(--text-inverse);
   margin-bottom: 1.25rem;
 }
 
@@ -2778,7 +2778,7 @@ body.no-scroll {
   font-family: var(--font-sans);
   font-size: var(--fs-body);
   line-height: var(--lh-body);
-  color: rgba(18, 26, 33, 0.85);
+  color: var(--text-inverse);
   max-width: 620px;
   margin-bottom: 2.5rem;
 }

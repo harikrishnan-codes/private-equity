@@ -9,6 +9,8 @@
     <link rel="icon" href="./assets/logo.webp">
     <link rel="stylesheet" href="root.css">
     <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="service.css">
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,7 +25,7 @@
     <header class="site-header" id="siteHeader">
         <div class="container header-container">
             <a href="index.html" class="brand-logo">
-                <img src="./assets/logo 20.webp" alt="logo" width="150px" height="50px">
+                <img src="./assets/logo 1.webp" alt="logo" width="150px" height="50px">
             </a>
 
             <nav class="nav-wrapper" id="navWrapper" aria-label="Main Navigation">
@@ -65,6 +67,707 @@
         </div>
     </header>
 
+
+
+
+
+
+<!-- Service Page Hero Section with Ambient SVG Flow Animation -->
+<section class="service-hero-section" id="serviceHero">
+  <!-- Classy Ambient SVG Grid & Orbital Curves Canvas -->
+  <div class="service-svg-canvas" aria-hidden="true">
+    <svg class="canvas-svg" viewBox="0 0 1440 900" fill="none" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <!-- Gradient Accents -->
+        <linearGradient id="orbitGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+          <stop offset="0%" stop-color="var(--primary-accent)" stop-opacity="0.45" />
+          <stop offset="50%" stop-color="var(--primary-mint)" stop-opacity="0.25" />
+          <stop offset="100%" stop-color="transparent" stop-opacity="0" />
+        </linearGradient>
+
+        <linearGradient id="orbitGrad2" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="0%" stop-color="var(--primary-mint)" stop-opacity="0.35" />
+          <stop offset="100%" stop-color="transparent" stop-opacity="0" />
+        </linearGradient>
+
+        <radialGradient id="auroraSpot" cx="50%" cy="40%" r="50%">
+          <stop offset="0%" stop-color="rgba(0, 172, 193, 0.22)" />
+          <stop offset="70%" stop-color="transparent" />
+        </radialGradient>
+      </defs>
+
+      <!-- Ambient Glow Orb -->
+      <circle cx="720" cy="350" r="450" fill="url(#auroraSpot)" />
+
+      <!-- Geometric Perspective Grid -->
+      <g stroke="rgba(235, 247, 241, 0.05)" stroke-width="1">
+        <line x1="0" y1="180" x2="1440" y2="180" />
+        <line x1="0" y1="360" x2="1440" y2="360" />
+        <line x1="0" y1="540" x2="1440" y2="540" />
+        <line x1="0" y1="720" x2="1440" y2="720" />
+        <line x1="240" y1="0" x2="240" y2="900" />
+        <line x1="480" y1="0" x2="480" y2="900" />
+        <line x1="720" y1="0" x2="720" y2="900" />
+        <line x1="960" y1="0" x2="960" y2="900" />
+        <line x1="1200" y1="0" x2="1200" y2="900" />
+      </g>
+
+      <!-- Flowing Animated Orbital Splines -->
+      <path class="svg-orbit-path path-primary" d="M-100,500 C300,200 600,750 1100,320 C1350,120 1500,250 1600,300" stroke="url(#orbitGrad1)" stroke-width="2" stroke-linecap="round" />
+      <path class="svg-orbit-path path-secondary" d="M-50,250 C400,650 850,150 1200,550 C1400,750 1550,600 1650,450" stroke="url(#orbitGrad2)" stroke-width="1.5" stroke-dasharray="10 8" />
+
+      <!-- Orbit Floating Nodes -->
+      <circle cx="580" cy="460" r="4" fill="var(--primary-accent)" class="svg-pulsing-node node-1" />
+      <circle cx="980" cy="380" r="5" fill="var(--primary-mint)" class="svg-pulsing-node node-2" />
+      <circle cx="340" cy="310" r="3.5" fill="#FFFFFF" class="svg-pulsing-node node-3" />
+    </svg>
+    <div class="service-hero-vignette"></div>
+  </div>
+
+  <div class="container service-hero-container">
+    <div class="service-hero-content">
+      <div class="service-tag-pill">
+        <span class="tag-pulse"></span>
+        <span>Investment Capabilities &bull; Specialized Playbooks</span>
+      </div>
+
+      <h1 class="service-hero-title">
+        Strategic capital models built for <span>enduring market scale</span>
+      </h1>
+
+      <p class="service-hero-desc">
+        We configure bespoke equity and operational architectures tailored to mid-market platforms. From majority buyouts to cross-border programmatic add-ons, our operating framework accelerates margin efficiency and enterprise durability.
+      </p>
+
+      <div class="service-hero-actions">
+        <a href="#service-solutions" class="btn btn-primary">
+          <span>Explore Frameworks</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <a href="contact.html" class="btn btn-secondary">
+          <span>Submit Mandate Brief</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17l9.2-9.2M17 17V7H7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Service Metric Highlights (Auto-Counter on Page Load) -->
+      <div class="service-stats-strip">
+        <div class="service-stat-item">
+          <div class="stat-number-wrap">
+            <span class="stat-prefix">$</span><span class="stat-counter" data-target="25">0</span><span class="stat-suffix">M+</span>
+          </div>
+          <span class="stat-meta">Minimum Equity Check</span>
+        </div>
+
+        <div class="stat-sep-line"></div>
+
+        <div class="service-stat-item">
+          <div class="stat-number-wrap">
+            <span class="stat-counter" data-target="45">0</span><span class="stat-suffix">+</span>
+          </div>
+          <span class="stat-meta">Programmatic Add-Ons</span>
+        </div>
+
+        <div class="stat-sep-line"></div>
+
+        <div class="service-stat-item">
+          <div class="stat-number-wrap">
+            <span class="stat-counter" data-target="100">0</span><span class="stat-suffix">%</span>
+          </div>
+          <span class="stat-meta">Operator Board Alignment</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Core Investment Pillars - Skeuomorphic Luxury / Craft UI -->
+<section class="service-craft-section" id="service-solutions">
+  <div class="container">
+    <div class="section-header-compact solutions-header">
+      <span class="section-tag">Institutional Solutions</span>
+      <h2 class="section-title">Engineered capital models for market leadership</h2>
+      <p class="section-sub">Bespoke equity structures crafted with tactile precision, tailored governance, and seasoned operator involvement.</p>
+    </div>
+
+    <div class="craft-solutions-grid">
+      <!-- Card 1: Majority Buyouts -->
+      <article class="craft-plaque-card">
+        <div class="card-metallic-sheen" aria-hidden="true"></div>
+        <div class="card-bevel-edge">
+          <div class="card-dial-header">
+            <div class="embossed-chassis">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+              </svg>
+            </div>
+            <span class="engraved-counter">MOD &bull; 01</span>
+          </div>
+
+          <div class="craft-body">
+            <h3 class="engraved-title">Majority Growth Buyouts</h3>
+            <p class="engraved-desc">Structured liquidity and executive succession models delivering institutional scale without degrading founder pedigree.</p>
+
+            <div class="recessed-gauge-panel">
+              <div class="gauge-meter-track">
+                <span class="gauge-fill-bar" style="width: 82%;"></span>
+              </div>
+              <div class="gauge-meta-row">
+                <span class="gauge-label">Allocation Velocity</span>
+                <strong class="gauge-value">$25M &ndash; $100M Check</strong>
+              </div>
+            </div>
+
+            <ul class="tactile-spec-list">
+              <li>
+                <span class="rivet-dot"></span>
+                <span>Founder recapitalization frameworks</span>
+              </li>
+              <li>
+                <span class="rivet-dot"></span>
+                <span>Board composition with Operating Partners</span>
+              </li>
+              <li>
+                <span class="rivet-dot"></span>
+                <span>Post-close incentives for tenured leaders</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="craft-action-strip">
+            <a href="contact.html" class="tactile-press-btn">
+              <span>Initiate Buyout Brief</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 2: Programmatic M&A (Featured Dark/Pine Luxury Chassis) -->
+      <article class="craft-plaque-card featured-chassis">
+        <div class="card-metallic-sheen" aria-hidden="true"></div>
+        <div class="card-bevel-edge">
+          <div class="card-dial-header">
+            <div class="embossed-chassis">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline>
+              </svg>
+            </div>
+            <span class="engraved-counter">MOD &bull; 02</span>
+          </div>
+
+          <div class="craft-body">
+            <h3 class="engraved-title">Programmatic Add-on M&amp;A</h3>
+            <p class="engraved-desc">Direct equity reserves backing bolt-on targets to consolidate fragmented categories and unlock multi-market scale.</p>
+
+            <div class="recessed-gauge-panel">
+              <div class="gauge-meter-track">
+                <span class="gauge-fill-bar" style="width: 94%;"></span>
+              </div>
+              <div class="gauge-meta-row">
+                <span class="gauge-label">Integration Velocity</span>
+                <strong class="gauge-value">&lt; 18 Months Target</strong>
+              </div>
+            </div>
+
+            <ul class="tactile-spec-list">
+              <li>
+                <span class="rivet-dot"></span>
+                <span>In-house diligence and valuation execution</span>
+              </li>
+              <li>
+                <span class="rivet-dot"></span>
+                <span>ERP &amp; financial architecture harmonization</span>
+              </li>
+              <li>
+                <span class="rivet-dot"></span>
+                <span>Accretive EBITDA valuation expansion</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="craft-action-strip">
+            <a href="contact.html" class="tactile-press-btn">
+              <span>Review M&amp;A Strategy</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Card 3: Operator Turnaround & Scaling -->
+      <article class="craft-plaque-card">
+        <div class="card-metallic-sheen" aria-hidden="true"></div>
+        <div class="card-bevel-edge">
+          <div class="card-dial-header">
+            <div class="embossed-chassis">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="m4.93 4.93 4.24 4.24"></path>
+                <path d="m14.83 9.17 4.24-4.24"></path>
+                <path d="m14.83 14.83 4.24 4.24"></path>
+                <path d="m9.17 14.83-4.24 4.24"></path>
+              </svg>
+            </div>
+            <span class="engraved-counter">MOD &bull; 03</span>
+          </div>
+
+          <div class="craft-body">
+            <h3 class="engraved-title">Operational Modernization</h3>
+            <p class="engraved-desc">Embedded tactical teams deploying cloud migration, automated analytics, and margin optimization protocols.</p>
+
+            <div class="recessed-gauge-panel">
+              <div class="gauge-meter-track">
+                <span class="gauge-fill-bar" style="width: 76%;"></span>
+              </div>
+              <div class="gauge-meta-row">
+                <span class="gauge-label">Margin Expansion</span>
+                <strong class="gauge-value">+640 bps Average</strong>
+              </div>
+            </div>
+
+            <ul class="tactile-spec-list">
+              <li>
+                <span class="rivet-dot"></span>
+                <span>AI and operational throughput integration</span>
+              </li>
+              <li>
+                <span class="rivet-dot"></span>
+                <span>Working capital balance sheet efficiency</span>
+              </li>
+              <li>
+                <span class="rivet-dot"></span>
+                <span>Enterprise pricing optimization playbooks</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="craft-action-strip">
+            <a href="contact.html" class="tactile-press-btn">
+              <span>View Operating Deck</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </a>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Global Sector Mandates - Expanding Accordion Showcase -->
+<section class="pe-accordion-section" id="sectors">
+  <div class="container">
+    <div class="section-header-compact solutions-header">
+      <span class="section-tag">Sector Specialization</span>
+      <h2 class="section-title">Targeted deployment across resilient enterprise verticals</h2>
+      <p class="section-sub">We deploy specialized operating playbooks and deep capital reserves across defensible categories exhibiting strong recurring cash flows.</p>
+    </div>
+
+    <!-- Expanding Flex Accordion Deck -->
+    <div class="pe-accordion-wrapper">
+      
+      <!-- Panel 1: Enterprise SaaS -->
+      <article class="pe-accordion-panel" tabindex="0">
+        <div class="panel-bg-media" style="background-image: url('https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="panel-scrim-overlay"></div>
+
+        <!-- Idle State Vertical Identifier -->
+        <div class="panel-vertical-bar">
+          <span class="vertical-index">01</span>
+          <span class="vertical-title">Enterprise Software</span>
+        </div>
+
+        <!-- Hover Reveal Content Pane -->
+        <div class="panel-reveal-content">
+          <div class="reveal-inner">
+            <div class="reveal-badge">B2B SaaS Core</div>
+            <h3 class="reveal-title">Enterprise Software &amp; Cloud</h3>
+            <p class="reveal-summary">
+              Scaling recurring revenue platforms, migrating legacy enterprise stacks, and engineering add-on integrations to expand ARR durability.
+            </p>
+
+            <div class="reveal-metrics-row">
+              <div class="metric-cell">
+                <strong>4.2x</strong>
+                <span>Median ARR Scale</span>
+              </div>
+              <div class="metric-sep"></div>
+              <div class="metric-cell">
+                <strong>Rule of 50+</strong>
+                <span>Operating Profile</span>
+              </div>
+            </div>
+
+            <a href="service.html" class="btn btn-secondary">
+              <span>View Sector Thesis</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Panel 2: Global Supply Chain & Logistics -->
+      <article class="pe-accordion-panel active-default" tabindex="0">
+        <div class="panel-bg-media" style="background-image: url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="panel-scrim-overlay"></div>
+
+        <div class="panel-vertical-bar">
+          <span class="vertical-index">02</span>
+          <span class="vertical-title">Global Logistics</span>
+        </div>
+
+        <div class="panel-reveal-content">
+          <div class="reveal-inner">
+            <div class="reveal-badge">Supply Infrastructure</div>
+            <h3 class="reveal-title">Intelligent Freight &amp; Logistics</h3>
+            <p class="reveal-summary">
+              Consolidating intermodal freight routes, automated fulfillment hubs, and digitized terminal throughput with high-velocity working capital.
+            </p>
+
+            <div class="reveal-metrics-row">
+              <div class="metric-cell">
+                <strong>-42%</strong>
+                <span>Cycle Time Reduction</span>
+              </div>
+              <div class="metric-sep"></div>
+              <div class="metric-cell">
+                <strong>$32M</strong>
+                <span>Route Synergies</span>
+              </div>
+            </div>
+
+            <a href="service.html" class="btn btn-secondary">
+              <span>View Sector Thesis</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Panel 3: Energy Transition & Infrastructure -->
+      <article class="pe-accordion-panel" tabindex="0">
+        <div class="panel-bg-media" style="background-image: url('https://images.unsplash.com/photo-1466611653911-95081537e5b7?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="panel-scrim-overlay"></div>
+
+        <div class="panel-vertical-bar">
+          <span class="vertical-index">03</span>
+          <span class="vertical-title">Energy Transition</span>
+        </div>
+
+        <div class="panel-reveal-content">
+          <div class="reveal-inner">
+            <div class="reveal-badge">Clean Infrastructure</div>
+            <h3 class="reveal-title">Power Grid &amp; Cleantech</h3>
+            <p class="reveal-summary">
+              Deploying expansion equity into grid resilience, distributed storage architectures, and decarbonization platforms backing institutional LPs.
+            </p>
+
+            <div class="reveal-metrics-row">
+              <div class="metric-cell">
+                <strong>3.4x</strong>
+                <span>MOIC Performance</span>
+              </div>
+              <div class="metric-sep"></div>
+              <div class="metric-cell">
+                <strong>1.8 GW</strong>
+                <span>Capacity Deployed</span>
+              </div>
+            </div>
+
+            <a href="service.html" class="btn btn-secondary">
+              <span>View Sector Thesis</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Panel 4: Healthcare & Life Sciences -->
+      <article class="pe-accordion-panel" tabindex="0">
+        <div class="panel-bg-media" style="background-image: url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="panel-scrim-overlay"></div>
+
+        <div class="panel-vertical-bar">
+          <span class="vertical-index">04</span>
+          <span class="vertical-title">Healthcare Platforms</span>
+        </div>
+
+        <div class="panel-reveal-content">
+          <div class="reveal-inner">
+            <div class="reveal-badge">HealthTech Diagnostics</div>
+            <h3 class="reveal-title">Clinical Systems &amp; Devices</h3>
+            <p class="reveal-summary">
+              Modernizing patient data infrastructure, standardizing regulatory compliance, and acquiring regional specialized clinics into unified platforms.
+            </p>
+
+            <div class="reveal-metrics-row">
+              <div class="metric-cell">
+                <strong>$650M</strong>
+                <span>Recap Completed</span>
+              </div>
+              <div class="metric-sep"></div>
+              <div class="metric-cell">
+                <strong>38.4%</strong>
+                <span>Realized Net IRR</span>
+              </div>
+            </div>
+
+            <a href="service.html" class="btn btn-secondary">
+              <span>View Sector Thesis</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Panel 5: Robotics & Autonomous Systems -->
+      <article class="pe-accordion-panel" tabindex="0">
+        <div class="panel-bg-media" style="background-image: url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1200&q=80');"></div>
+        <div class="panel-scrim-overlay"></div>
+
+        <div class="panel-vertical-bar">
+          <span class="vertical-index">05</span>
+          <span class="vertical-title">Industrial Robotics</span>
+        </div>
+
+        <div class="panel-reveal-content">
+          <div class="reveal-inner">
+            <div class="reveal-badge">Precision Hardware</div>
+            <h3 class="reveal-title">Autonomous Factory Systems</h3>
+            <p class="reveal-summary">
+              Financing automated manufacturing equipment, AI-driven machine-vision inspection, and modular robotic arms across high-precision facilities.
+            </p>
+
+            <div class="reveal-metrics-row">
+              <div class="metric-cell">
+                <strong>+180%</strong>
+                <span>Throughput Boost</span>
+              </div>
+              <div class="metric-sep"></div>
+              <div class="metric-cell">
+                <strong>Zero-Defect</strong>
+                <span>Quality Profile</span>
+              </div>
+            </div>
+
+            <a href="service.html" class="btn btn-secondary">
+              <span>View Sector Thesis</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M7 17l9.2-9.2M17 17V7H7"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Fiduciary Execution Pipeline - Animated Stroke Dash Array Offset -->
+<section class="pipeline-flow-section" id="pipeline">
+  <div class="container">
+    <div class="section-header-compact solutions-header">
+      <span class="section-tag">Value Creation Architecture</span>
+      <h2 class="section-title">The institutional path from allocation to exit</h2>
+      <p class="section-sub">A closed-loop execution lifecycle connecting valuation underwriting, embedded operational restructuring, and programmatic realizations.</p>
+    </div>
+
+    <div class="pipeline-canvas-wrapper">
+      <!-- Animated SVG Circuit Backbone -->
+      <svg class="pipeline-svg-track" viewBox="0 0 1100 240" fill="none" preserveAspectRatio="none">
+        <defs>
+          <linearGradient id="pipelineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+            <stop offset="0%" stop-color="var(--primary-accent)" />
+            <stop offset="50%" stop-color="var(--primary-mint)" />
+            <stop offset="100%" stop-color="var(--accent-button-bg)" />
+          </linearGradient>
+        </defs>
+
+        <!-- Static Background Ghost Circuit -->
+        <path d="M 50 120 C 200 40, 350 200, 550 120 C 750 40, 900 200, 1050 120" stroke="rgba(223, 240, 232, 0.85)" stroke-width="3" stroke-linecap="round" />
+
+        <!-- Animated Offset Dash Path -->
+        <path class="animated-offset-path" d="M 50 120 C 200 40, 350 200, 550 120 C 750 40, 900 200, 1050 120" stroke="url(#pipelineGrad)" stroke-width="3.5" stroke-linecap="round" />
+      </svg>
+
+      <!-- Step Stations Grid -->
+      <div class="pipeline-milestones-grid">
+        <!-- Milestone 1 -->
+        <article class="pipeline-station">
+          <div class="station-node-box">
+            <svg class="node-reticle-ring" viewBox="0 0 70 70">
+              <circle cx="35" cy="35" r="30" class="ring-track" />
+              <circle cx="35" cy="35" r="30" class="ring-animated" />
+            </svg>
+            <div class="node-core">
+              <i class="fa-solid fa-compass"></i>
+            </div>
+            <span class="node-index">01</span>
+          </div>
+          <div class="station-info">
+            <span class="station-phase">Phase 01</span>
+            <h3 class="station-title">Sourcing &amp; Underwriting</h3>
+            <p class="station-desc">Proprietary sourcing outside traditional banker auctions targeting $5M&ndash;$25M recurring EBITDA platforms.</p>
+          </div>
+        </article>
+
+        <!-- Milestone 2 -->
+        <article class="pipeline-station">
+          <div class="station-node-box">
+            <svg class="node-reticle-ring" viewBox="0 0 70 70">
+              <circle cx="35" cy="35" r="30" class="ring-track" />
+              <circle cx="35" cy="35" r="30" class="ring-animated" />
+            </svg>
+            <div class="node-core">
+              <i class="fa-solid fa-cube"></i>
+            </div>
+            <span class="node-index">02</span>
+          </div>
+          <div class="station-info">
+            <span class="station-phase">Phase 02</span>
+            <h3 class="station-title">Operator Deployment</h3>
+            <p class="station-desc">Pairing companies with seasoned former CEOs to modernize tech infrastructure and optimize margins.</p>
+          </div>
+        </article>
+
+        <!-- Milestone 3 -->
+        <article class="pipeline-station">
+          <div class="station-node-box">
+            <svg class="node-reticle-ring" viewBox="0 0 70 70">
+              <circle cx="35" cy="35" r="30" class="ring-track" />
+              <circle cx="35" cy="35" r="30" class="ring-animated" />
+            </svg>
+            <div class="node-core">
+              <i class="fa-solid fa-network-wired"></i>
+            </div>
+            <span class="node-index">03</span>
+          </div>
+          <div class="station-info">
+            <span class="station-phase">Phase 03</span>
+            <h3 class="station-title">Programmatic Add-Ons</h3>
+            <p class="station-desc">Deploying dry-powder reserves for bolt-on targets to establish territorial scale and consolidate supply chains.</p>
+          </div>
+        </article>
+
+        <!-- Milestone 4 -->
+        <article class="pipeline-station">
+          <div class="station-node-box">
+            <svg class="node-reticle-ring" viewBox="0 0 70 70">
+              <circle cx="35" cy="35" r="30" class="ring-track" />
+              <circle cx="35" cy="35" r="30" class="ring-animated" />
+            </svg>
+            <div class="node-core">
+              <i class="fa-solid fa-trophy"></i>
+            </div>
+            <span class="node-index">04</span>
+          </div>
+          <div class="station-info">
+            <span class="station-phase">Phase 04</span>
+            <h3 class="station-title">Strategic Liquidity</h3>
+            <p class="station-desc">Exit realization to sovereign funds, public offerings, or institutional recapitalizations averaging 8.2x MOIC.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+
+<!-- Final Mandate & Capital Allocation CTA Section -->
+<section class="service-final-cta-section" id="serviceCta">
+  <!-- Ken Burns Auto-Zoom Background Media -->
+  <div class="cta-bg-wrapper" aria-hidden="true">
+    <div class="cta-bg-image"></div>
+    <div class="cta-overlay"></div>
+  </div>
+
+  <div class="container cta-content-container">
+    <div class="cta-box-wrapper">
+      <div class="cta-pill-tag">
+        <span class="pulse-point"></span>
+        <span>Confidential Capital Deployment</span>
+      </div>
+
+      <h2 class="cta-title">
+        Position your enterprise for its <span>defining liquidity horizon</span>
+      </h2>
+
+      <p class="cta-lead">
+        Whether executing a founder-led recapitalization, evaluating strategic add-on consolidation, or restructuring balance-sheet flexibility, our senior investment partners review all mandates under strict fiduciary discretion.
+      </p>
+
+      <div class="cta-button-group">
+        <a href="contact.html" class="btn btn-primary">
+          <span>Schedule Executive Brief</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="5" y1="12" x2="19" y2="12"></line>
+            <polyline points="12 5 19 12 12 19"></polyline>
+          </svg>
+        </a>
+
+        <a href="about.html" class="btn btn-secondary">
+          <span>Meet Investment Committee</span>
+          <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M7 17l9.2-9.2M17 17V7H7"/>
+          </svg>
+        </a>
+      </div>
+
+      <!-- Trust Metrics Bar -->
+      <div class="cta-trust-bar">
+        <div class="trust-item">
+          <span class="trust-metric">&lt; 48h</span>
+          <span class="trust-caption">Direct Partner Review</span>
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">
+          <span class="trust-metric">100%</span>
+          <span class="trust-caption">NDA Discretion</span>
+        </div>
+        <div class="trust-sep"></div>
+        <div class="trust-item">
+          <span class="trust-metric">$100M+</span>
+          <span class="trust-caption">Single-Asset Capacity</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 
 
@@ -176,6 +879,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="script.js"></script>
+        <script src="service.js"></script>
+
 </body>
 
 </html>
