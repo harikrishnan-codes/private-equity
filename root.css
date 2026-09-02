@@ -1,0 +1,246 @@
+:root {
+  /* ===================================================
+     CORE PALETTE (Private Equity / Mint Slate Theme)
+     =================================================== */
+  --bg-page: #F7FAF8;             /* Light crisp neutral canvas */
+  --bg-mint-soft: #DFF0E8;        /* Soft mint green section background */
+  --bg-mint-light: #EBF7F1;       /* Light pale mint for cards/pills */
+  --bg-card: #FFFFFF;             /* Crisp pure white for cards */
+  --bg-dark: #121A21;             /* Deep slate-black hero / dark banner */
+  --bg-footer: #18222A;           /* Rich dark navy/charcoal for footer */
+  --bg-subtle-gray: #F5F5F5;      /* Off-white secondary surfaces */
+
+  /* Brand Accents & Interactive */
+  --primary-accent: #00ACC1;      /* Bright cyan-teal accent */
+  --primary-mint: #2E8B76;        /* Deep pine/mint for active states */
+  --accent-button-bg: #1A7F64;    /* Strong emerald-teal for CTAs */
+  --accent-button-hover: #146650; /* Darker CTA hover */
+  --badge-bg: #D2EBDD;            /* Mint badge background */
+
+  /* Text & Typography Colors */
+  --text-main: #111827;           /* High-contrast dark charcoal */
+  --text-muted: #52636E;          /* Slate-gray for body & subtitles */
+  --text-light: #8C9CA8;          /* Light slate for timestamps & meta */
+  --text-inverse: #FFFFFF;        /* Pure white for dark sections/footer */
+  --text-inverse-muted: #9EAFBC;  /* Light slate for footer subtext */
+
+  /* Aliases & Direct Neutral Mappings */
+  --primary-color: var(--bg-page);
+  --neutral-white: var(--text-main);
+  --neutral-grey: var(--text-muted);
+  --neutral-dark-grey: var(--text-light);
+
+  /* Borders & Dividers */
+  --border-light: rgba(18, 26, 33, 0.08); /* Subtle line for white cards */
+  --border-mint: #C4E2D3;                 /* Mint-toned card/box borders */
+  --border-dark: rgba(255, 255, 255, 0.1);/* Divider for dark sections */
+
+  /* ===================================================
+     TYPOGRAPHY STYLES & FONT FAMILIES
+     =================================================== */
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-serif: 'Instrument Serif', Georgia, serif;
+  --font-display: 'Space Grotesk', system-ui, sans-serif;
+  --font-alt: 'DM Sans', system-ui, sans-serif;
+
+  /* Font Weights */
+  --fw-light: 300;
+  --fw-regular: 400;
+  --fw-medium: 500;
+  --fw-semibold: 600;
+  --fw-bold: 700;
+
+  /* Font Scale & Line Heights */
+  --fs-h1: clamp(2.25rem, 4vw, 3.5rem);
+  --fs-h2: clamp(1.75rem, 3vw, 2.5rem);
+  --fs-h3: clamp(1.35rem, 2vw, 1.85rem);
+  --fs-h4: 1.25rem;
+  --fs-h5: 1.1rem;
+  --fs-body: 1rem;
+  --fs-caption: 0.875rem;
+  --fs-footnote: 0.75rem;
+
+  --lh-heading: 1.15;
+  --lh-body: 1.6;
+
+  /* ===================================================
+     ELEVATION, RADII & TRANSITIONS
+     =================================================== */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --shadow-sm: 0 2px 8px rgba(18, 26, 33, 0.04);
+  --shadow-card: 0 4px 20px rgba(18, 26, 33, 0.06);
+
+  --transition-smooth: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-quantum: all 0.25s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  height: 100%;
+  overflow-y: scroll;
+}
+
+body {
+  background-color: var(--primary-color); 
+  color: var(--neutral-white);
+  font-family: var(--font-sans);
+  line-height: var(--lh-body);
+  min-height: 100%;
+  overflow-x: hidden;
+}
+
+#app, #root, .wrapper, main {
+  overflow: visible !important;
+  height: auto !important;
+}
+
+.container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ==========================================================================
+   TYPOGRAPHY BINDING SCALES
+   ========================================================================== */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--neutral-white);
+  font-family: var(--font-sans);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-heading);
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+}
+
+h1 { font-size: var(--fs-h1); }
+h2 { font-size: var(--fs-h2); }
+h3 { font-size: var(--fs-h3); }
+h4 { font-size: var(--fs-h4); }
+h5 { font-size: var(--fs-h5); }
+
+p { 
+  font-size: var(--fs-body); 
+  margin-bottom: 1rem; 
+  color: var(--neutral-grey); 
+}
+
+.caption { font-size: var(--fs-caption); color: var(--neutral-grey); }
+.footnote { font-size: var(--fs-footnote); color: var(--neutral-dark-grey); }
+
+a {
+  text-decoration: none;
+  color: inherit;
+  transition: var(--transition-quantum);
+}
+
+ul { list-style: none; }
+
+/* ==========================================================================
+   BUTTONS & SVG INTERACTIONS
+   ========================================================================== */
+.btn {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.65rem;
+  font-family: var(--font-sans);
+  font-size: 0.9375rem;
+  font-weight: var(--fw-medium);
+  line-height: 1;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius-full);
+  border: 1px solid transparent;
+  cursor: pointer;
+  white-space: nowrap;
+  user-select: none;
+  overflow: hidden;
+  transition: var(--transition-smooth);
+}
+
+.btn span {
+  display: inline-block;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn .btn-icon {
+  width: 1.1rem;
+  height: 1.1rem;
+  flex-shrink: 0;
+  stroke: currentColor;
+  stroke-width: 2;
+  fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), stroke 0.35s ease;
+}
+
+.btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+.btn-primary {
+  background-color: var(--accent-button-bg);
+  color: var(--text-inverse);
+  border-color: var(--accent-button-bg);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-button-hover);
+  border-color: var(--accent-button-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-card);
+}
+
+.btn-primary:hover span {
+  transform: translateX(-2px);
+}
+
+.btn-primary:hover .btn-icon {
+  transform: translateX(4px);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+.btn-secondary {
+  background-color: var(--bg-card);
+  color: var(--text-main);
+  border-color: var(--border-mint);
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background-color: var(--bg-mint-light);
+  color: var(--primary-mint);
+  border-color: var(--primary-mint);
+  transform: translateY(-1px);
+}
+
+.btn-secondary:hover span {
+  transform: translateX(-2px);
+}
+
+.btn-secondary:hover .btn-icon {
+  transform: translate(3px, -3px);
+}
+
+.btn-secondary:active {
+  transform: translateY(0);
+  background-color: var(--badge-bg);
+}
