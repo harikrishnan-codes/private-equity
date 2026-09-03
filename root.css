@@ -1,25 +1,25 @@
 :root {
-  --bg-page: #F7FAF8;             /* Light crisp neutral canvas */
-  --bg-mint-soft: #DFF0E8;        /* Soft mint green section background */
-  --bg-mint-light: #EBF7F1;       /* Light pale mint for cards/pills */
-  --bg-card: #FFFFFF;             /* Crisp pure white for cards */
-  --bg-dark: #121A21;             /* Deep slate-black hero / dark banner */
-  --bg-footer: #18222A;           /* Rich dark navy/charcoal for footer */
-  --bg-subtle-gray: #F5F5F5;      /* Off-white secondary surfaces */
+  --bg-page: #F7FAF8;             
+  --bg-mint-soft: #DFF0E8;         
+  --bg-mint-light: #EBF7F1;      
+  --bg-card: #FFFFFF;             
+  --bg-dark: #121A21;              
+  --bg-footer: #18222A;           
+  --bg-subtle-gray: #F5F5F5;      
 
   /* Brand Accents & Interactive */
-  --primary-accent: #00ACC1;      /* Bright cyan-teal accent */
-  --primary-mint: #2E8B76;        /* Deep pine/mint for active states */
-  --accent-button-bg: #1A7F64;    /* Strong emerald-teal for CTAs */
-  --accent-button-hover: #146650; /* Darker CTA hover */
-  --badge-bg: #D2EBDD;            /* Mint badge background */
+  --primary-accent: #00ACC1;      
+  --primary-mint: #2E8B76;         
+  --accent-button-bg: #1A7F64;    
+  --accent-button-hover: #146650;  
+  --badge-bg: #D2EBDD;            
 
   /* Text & Typography Colors */
-  --text-main: #111827;           /* High-contrast dark charcoal */
-  --text-muted: #52636E;          /* Slate-gray for body & subtitles */
-  --text-light: #8C9CA8;          /* Light slate for timestamps & meta */
-  --text-inverse: #FFFFFF;        /* Pure white for dark sections/footer */
-  --text-inverse-muted: #9EAFBC;  /* Light slate for footer subtext */
+  --text-main: #111827;           
+  --text-muted: #52636E;          
+  --text-light: #8C9CA8;          
+  --text-inverse: #FFFFFF;         
+  --text-inverse-muted: #9EAFBC;   
 
   /* Aliases & Direct Neutral Mappings */
   --primary-color: var(--bg-page);
@@ -28,13 +28,11 @@
   --neutral-dark-grey: var(--text-light);
 
   /* Borders & Dividers */
-  --border-light: rgba(18, 26, 33, 0.08); /* Subtle line for white cards */
-  --border-mint: #C4E2D3;                 /* Mint-toned card/box borders */
-  --border-dark: rgba(255, 255, 255, 0.1);/* Divider for dark sections */
+  --border-light: rgba(18, 26, 33, 0.08);  
+  --border-mint: #C4E2D3;              
+  --border-dark: rgba(255, 255, 255, 0.1); 
 
-  /* ===================================================
-     TYPOGRAPHY STYLES & FONT FAMILIES
-     =================================================== */
+ 
   --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
   --font-serif: 'Instrument Serif', Georgia, serif;
   --font-display: 'Space Grotesk', system-ui, sans-serif;
@@ -60,9 +58,7 @@
   --lh-heading: 1.15;
   --lh-body: 1.6;
 
-  /* ===================================================
-     ELEVATION, RADII & TRANSITIONS
-     =================================================== */
+ 
   --radius-sm: 6px;
   --radius-md: 12px;
   --radius-lg: 20px;
@@ -107,9 +103,7 @@ body {
   padding: 0 2rem;
 }
 
-/* ==========================================================================
-   TYPOGRAPHY BINDING SCALES
-   ========================================================================== */
+ 
 h1, h2, h3, h4, h5, h6 {
   color: var(--neutral-white);
   font-family: var(--font-sans);
@@ -142,9 +136,7 @@ a {
 
 ul { list-style: none; }
 
-/* ==========================================================================
-   BUTTONS & SVG INTERACTIONS
-   ========================================================================== */
+ 
 .btn {
   position: relative;
   display: inline-flex;

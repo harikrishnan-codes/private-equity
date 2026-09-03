@@ -408,7 +408,18 @@ if (document.querySelector(".zigzag-stream") && typeof ScrollTrigger !== "undefi
     );
   });
 }
+document.addEventListener("DOMContentLoaded", () => {
+  const flipStages = document.querySelectorAll(".flip-stage");
 
+  flipStages.forEach((stage) => {
+    stage.addEventListener("click", (e) => {
+       if (e.target.closest("a, button")) {
+        return;
+      }
+       stage.classList.toggle("flipped");
+    });
+  });
+});
 
 
 
