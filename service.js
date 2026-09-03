@@ -163,6 +163,56 @@ if (document.querySelector(".pipeline-canvas-wrapper") && typeof ScrollTrigger !
 
 
 
+
+// Synchronize Active Milestone in Left Panel as Right Scroll Container Moves
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollStage = document.getElementById("parallelScrollStage");
+  const cards = document.querySelectorAll(".parallel-card");
+  const navLinks = document.querySelectorAll(".p-nav-link");
+
+  if (!scrollStage || !cards.length || !navLinks.length) return;
+
+  // 1. Highlight nav indicator when scrolling inside the right container
+  scrollStage.addEventListener("scroll", () => {
+    const stageTop = scrollStage.getBoundingClientRect().top;
+
+    cards.forEach((card) => {
+      const cardRect = card.getBoundingClientRect();
+      const relativeTop = cardRect.top - stageTop;
+
+      if (relativeTop <= 150 && relativeTop + cardRect.height >= 150) {
+        const step = card.getAttribute("data-step");
+        navLinks.forEach((link) => {
+          link.classList.toggle("active", link.getAttribute("data-target") === step);
+        });
+      }
+    });
+  });
+
+  // 2. Smooth click-to-scroll within the right container
+  navLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute("href");
+      const targetEl = document.querySelector(targetId);
+
+      if (targetEl) {
+        const targetOffset = targetEl.offsetTop - scrollStage.offsetTop;
+        scrollStage.scrollTo({
+          top: targetOffset,
+          behavior: "smooth"
+        });
+      }
+    });
+  });
+});
+
+
+
+
+
+
+
 // GSAP Scroll Reveal for Final CTA Elements
 if (document.querySelector(".cta-box-wrapper") && typeof ScrollTrigger !== "undefined") {
   gsap.fromTo(

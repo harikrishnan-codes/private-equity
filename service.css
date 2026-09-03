@@ -1273,6 +1273,484 @@
 
 
 
+/* ==========================================================================
+   PARALLEL FIXED LEFT & SCROLLING RIGHT SECTION
+   ========================================================================== */
+.parallel-scroll-section {
+  background-color: var(--bg-mint-light);
+  padding: 6.5rem 0;
+  position: relative;
+  border-top: 1px solid var(--border-mint);
+  border-bottom: 1px solid var(--border-mint);
+}
+
+.parallel-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Parallel Frame: Desktop Locked Height so Both Panes Align Exactly */
+.parallel-split-frame {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 4.5rem;
+  align-items: stretch;
+  height: calc(100vh - 10rem);
+  max-height: 800px;
+  min-height: 620px;
+}
+
+/* --------------------------------------------------------------------------
+   Left Pane: Fixed in Viewport Parallel to Right Scrolling Content
+   -------------------------------------------------------------------------- */
+.parallel-left-pane {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.left-fixed-inner {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 1.5rem;
+}
+
+.parallel-left-pane .section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: var(--fs-footnote);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--primary-mint);
+  background-color: var(--bg-card);
+  padding: 0.4rem 1.15rem;
+  border-radius: var(--radius-full);
+  border: 1px solid var(--border-mint);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.25rem;
+  width: fit-content;
+}
+
+.parallel-left-pane .section-tag::before {
+  content: "";
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  border-radius: var(--radius-full);
+  background-color: var(--primary-accent);
+}
+
+.parallel-heading {
+  font-family: var(--font-sans);
+  font-size: clamp(2rem, 3vw, 2.75rem);
+  font-weight: var(--fw-bold);
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  color: var(--text-main);
+  margin-bottom: 1.15rem;
+}
+
+.parallel-heading span {
+  color: var(--primary-accent);
+}
+
+.parallel-subtext {
+  font-family: var(--font-sans);
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+}
+
+/* Nav Step Selector */
+.parallel-nav-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+}
+
+.p-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.7rem 1rem;
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.p-nav-bullet {
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-full);
+  background-color: var(--border-mint);
+  transition: all 0.25s ease;
+}
+
+.p-nav-text {
+  font-family: var(--font-sans);
+  font-size: var(--fs-caption);
+  font-weight: var(--fw-medium);
+  color: var(--text-muted);
+  transition: color 0.25s ease;
+}
+
+.p-nav-link:hover,
+.p-nav-link.active {
+  background-color: var(--bg-card);
+  border-color: var(--border-mint);
+  box-shadow: var(--shadow-sm);
+  transform: translateX(6px);
+}
+
+.p-nav-link.active .p-nav-bullet {
+  background-color: var(--primary-accent);
+  box-shadow: 0 0 8px var(--primary-accent);
+  transform: scale(1.3);
+}
+
+.p-nav-link.active .p-nav-text {
+  color: var(--text-main);
+  font-weight: var(--fw-bold);
+}
+
+/* Left Bottom Trust Info */
+.parallel-trust-strip {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-mint);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-top: auto;
+}
+
+.trust-icon-box {
+  width: 38px;
+  height: 38px;
+  border-radius: var(--radius-full);
+  background-color: var(--bg-mint-soft);
+  border: 1px solid var(--border-mint);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary-mint);
+  flex-shrink: 0;
+}
+
+.trust-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.trust-meta strong {
+  font-family: var(--font-sans);
+  font-size: var(--fs-footnote);
+  font-weight: var(--fw-bold);
+  color: var(--text-main);
+}
+
+.trust-meta span {
+  font-size: var(--fs-footnote);
+  color: var(--text-muted);
+}
+
+/* --------------------------------------------------------------------------
+   Right Pane: Dedicated Independent Scrolling Container
+   -------------------------------------------------------------------------- */
+.parallel-right-pane {
+  height: 100%;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  padding-right: 1.25rem;
+  /* Clean Custom Scrollbar */
+  scrollbar-width: thin;
+  scrollbar-color: var(--primary-mint) rgba(18, 26, 33, 0.08);
+}
+
+.parallel-right-pane::-webkit-scrollbar {
+  width: 6px;
+}
+
+.parallel-right-pane::-webkit-scrollbar-track {
+  background: rgba(18, 26, 33, 0.05);
+  border-radius: var(--radius-full);
+}
+
+.parallel-right-pane::-webkit-scrollbar-thumb {
+  background-color: var(--primary-mint);
+  border-radius: var(--radius-full);
+}
+
+.cards-scroll-stream {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
+}
+
+/* Individual Content Card */
+.parallel-card {
+  position: relative;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-mint);
+  border-radius: var(--radius-lg);
+  padding: 2.75rem 2.25rem;
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.parallel-card:hover {
+  border-color: var(--primary-mint);
+  box-shadow: var(--shadow-card);
+  transform: translateY(-3px);
+}
+
+.card-edge-glow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-mint), var(--primary-accent));
+}
+
+.card-head-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+}
+
+.card-phase-badge {
+  font-family: var(--font-sans);
+  font-size: var(--fs-footnote);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.08em;
+  color: var(--primary-mint);
+  background-color: var(--bg-mint-soft);
+  border: 1px solid var(--border-mint);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+}
+
+.card-digit {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: var(--fw-bold);
+  color: var(--border-mint);
+}
+
+.card-headline {
+  font-family: var(--font-sans);
+  font-size: 1.35rem;
+  font-weight: var(--fw-bold);
+  line-height: 1.25;
+  color: var(--text-main);
+  margin-bottom: 0.85rem;
+}
+
+.card-body-copy {
+  font-size: var(--fs-body);
+  line-height: var(--lh-body);
+  color: var(--text-muted);
+  margin-bottom: 1.75rem;
+}
+
+.card-metrics-row {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  border-top: 1px solid var(--border-mint);
+  border-bottom: 1px solid var(--border-mint);
+  margin-bottom: 1.5rem;
+}
+
+.metric-cell {
+  display: flex;
+  flex-direction: column;
+}
+
+.metric-cell strong {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: var(--fw-bold);
+  color: var(--text-main);
+  line-height: 1.1;
+  margin-bottom: 0.2rem;
+}
+
+.metric-cell span {
+  font-family: var(--font-sans);
+  font-size: var(--fs-footnote);
+  color: var(--text-light);
+}
+
+.metric-sep {
+  width: 1px;
+  height: 30px;
+  background-color: var(--border-mint);
+}
+
+.card-bullet-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.card-bullet-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-sans);
+  font-size: var(--fs-caption);
+  color: var(--text-muted);
+}
+
+.card-bullet-list li i {
+  color: var(--primary-accent);
+  font-size: 0.8rem;
+}
+
+/* Featured Dark Pine Card */
+.featured-step {
+  background: linear-gradient(150deg, #134537 0%, #0c2b23 100%);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 16px 36px rgba(12, 43, 35, 0.25);
+}
+
+.featured-step .card-phase-badge {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: var(--primary-accent);
+}
+
+.featured-step .card-digit {
+  color: rgba(255, 255, 255, 0.15);
+}
+
+.featured-step .card-headline {
+  color: var(--text-inverse);
+}
+
+.featured-step .card-body-copy {
+  color: var(--badge-bg);
+  opacity: 0.9;
+}
+
+.featured-step .card-metrics-row {
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.featured-step .metric-cell strong {
+  color: var(--text-inverse);
+}
+
+.featured-step .metric-cell span {
+  color: var(--text-inverse-muted);
+}
+
+.featured-step .metric-sep {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.featured-step .card-bullet-list li {
+  color: var(--badge-bg);
+}
+
+/* ==========================================================================
+   768px MEDIA QUERY
+   ========================================================================== */
+@media (max-width: 768px) {
+  .parallel-scroll-section {
+    padding: 4.5rem 0;
+  }
+
+  .parallel-container {
+    padding: 0 1.25rem;
+  }
+
+  /* Break the viewport-locked frame on mobile for native natural scroll */
+  .parallel-split-frame {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+    min-height: auto;
+    gap: 3rem;
+  }
+
+  .parallel-left-pane {
+    height: auto;
+  }
+
+  .left-fixed-inner {
+    height: auto;
+    padding-right: 0;
+  }
+
+  .parallel-heading {
+    font-size: 2rem;
+  }
+
+  .parallel-subtext {
+    font-size: var(--fs-caption);
+    margin-bottom: 1.5rem;
+  }
+
+  .parallel-nav-stack {
+    display: none; /* Hide indicator buttons on mobile */
+  }
+
+  .parallel-right-pane {
+    height: auto;
+    overflow-y: visible;
+    padding-right: 0;
+  }
+
+  .parallel-card {
+    padding: 2rem 1.5rem;
+  }
+
+  .card-headline {
+    font-size: 1.25rem;
+  }
+
+  .card-body-copy {
+    font-size: var(--fs-caption);
+    margin-bottom: 1.25rem;
+  }
+
+  .card-metrics-row {
+    gap: 1.25rem;
+  }
+
+  .metric-cell strong {
+    font-size: 1.15rem;
+  }
+}
+
+
+
+
+
+
 
 /* ==========================================================================
    SERVICE FINAL CTA SECTION (KEN BURNS ZOOM + RICH OVERLAY)

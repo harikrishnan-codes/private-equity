@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Client Principal Portal &bull; Stackly Capital</title>
+  <link rel="stylesheet" href="root.css"/>
+    <link rel="stylesheet" href="style.css"/>
+
+      <link rel="stylesheet" href="admin.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="dashboard-shell-body">
+
+  <header class="mobile-dash-header">
+    <button type="button" class="dash-hamburger-btn" id="dashHamburgerBtn" aria-label="Toggle Navigation Drawer">
+      <span class="bar bar-top"></span>
+      <span class="bar bar-mid"></span>
+      <span class="bar bar-bot"></span>
+    </button>
+    <a href="error.html" class="mobile-dash-brand">
+      <i class="fa-solid fa-layer-group brand-accent"></i>
+      <span>STACKLY</span>
+    </a>
+    <div class="mobile-security-dot" title="Encrypted Connection Active"></div>
+  </header>
+
+  <div class="dash-sidebar-scrim" id="dashSidebarScrim"></div>
+
+  <div class="dash-core-layout">
+    
+    <aside class="dash-sidebar" id="dashSidebar">
+      <div class="sidebar-brand-wrapper">
+        <a href="error.html" class="dash-logo">
+          <span class="logo-icon"><i class="fa-solid fa-layer-group"></i></span>
+          <span class="logo-text">STACKLY</span>
+        </a>
+        <button type="button" class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close Navigation Drawer">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="sidebar-user-glance">
+        <div class="user-avatar-ring">
+          <i class="fa-solid fa-user-tie"></i>
+        </div>
+        <div class="user-glance-info">
+          <strong class="user-name">Client Principal</strong>
+          <span class="user-email-display" id="sidebarEmailDisplay">principal@enterprise.com</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button type="button" class="nav-entry active" data-tab="clientOverviewTab">
+          <i class="fa-solid fa-gauge-high"></i>
+          <span>Portal Summary</span>
+        </button>
+        <button type="button" class="nav-entry" data-tab="clientMandatesTab">
+          <i class="fa-solid fa-file-contract"></i>
+          <span>My Active Mandates</span>
+          <span class="nav-counter">2</span>
+        </button>
+        <button type="button" class="nav-entry" data-tab="clientDataroomTab">
+          <i class="fa-solid fa-folder-open"></i>
+          <span>Confidential Dataroom</span>
+        </button>
+        <button type="button" class="nav-entry" data-tab="clientTelemetryTab">
+          <i class="fa-solid fa-chart-line"></i>
+          <span>Value Creation Metrics</span>
+        </button>
+        <button type="button" class="nav-entry" data-tab="clientAdvisoryTab">
+          <i class="fa-solid fa-headset"></i>
+          <span>Dedicated Advisory Desk</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <a href="auth.html" class="dash-logout-anchor" id="dashLogoutAnchor">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span>Sign Out of Dataroom</span>
+        </a>
+      </div>
+    </aside>
+
+    <main class="dash-main-stage">
+      
+      <div class="dash-stage-topbar reveal-item">
+        <div class="topbar-heading">
+          <span class="system-status-chip">
+            <span class="pulse-indicator"></span> Mandate Verification Active
+          </span>
+          <h1 class="stage-title">Principal Portfolio &amp; Dataroom</h1>
+        </div>
+        <div class="topbar-actions">
+          <a href="error.html" class="live-session-tag">
+            <span class="session-label">Client Portal ID:</span>
+            <span class="session-val">CLT-2026-442</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="dash-profile-banner reveal-item">
+        <div class="banner-text-col">
+          <span class="banner-badge">AUTHENTICATED PRINCIPAL SESSION</span>
+          <h2 class="banner-title" id="stageUserEmail">principal@enterprise.com</h2>
+          <p class="banner-sub">
+            Secure bilateral tunnel established. Accessing proprietary valuation benchmarks and diligence disclosures.
+          </p>
+        </div>
+        <div class="banner-action-col">
+          <a href="error.html" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>Submit Mandate Brief</span>
+          </a>
+        </div>
+      </div>
+
+      <section class="tab-panel active" id="clientOverviewTab">
+        <div class="dash-metrics-grid">
+          <div class="metric-card reveal-item">
+            <span class="m-card-label">Realized Equity MOIC</span>
+            <div class="m-card-val-row">
+              <strong class="m-val">8.2x</strong>
+              <span class="m-trend positive">Top Decile</span>
+            </div>
+            <span class="m-card-footnote">Consolidated recapitalization base</span>
+          </div>
+
+          <div class="metric-card reveal-item">
+            <span class="m-card-label">Working Capital Unlocked</span>
+            <div class="m-card-val-row">
+              <strong class="m-val">+180 bps</strong>
+              <span class="m-trend positive">Post-ERP</span>
+            </div>
+            <span class="m-card-footnote">Q2 Operational integration yield</span>
+          </div>
+
+          <div class="metric-card reveal-item">
+            <span class="m-card-label">Add-on Diligence Pipeline</span>
+            <div class="m-card-val-row">
+              <strong class="m-val">4 Sourced</strong>
+              <span class="m-trend neutral">Off-Market</span>
+            </div>
+            <span class="m-card-footnote">Regional synergistic targets</span>
+          </div>
+
+          <div class="metric-card reveal-item">
+            <span class="m-card-label">Partner Desk SLA</span>
+            <div class="m-card-val-row">
+              <strong class="m-val">&lt; 24h</strong>
+              <span class="m-trend positive">Priority</span>
+            </div>
+            <span class="m-card-footnote">Direct advisory escalation</span>
+          </div>
+        </div>
+
+        <div class="dash-table-chassis reveal-item">
+          <div class="table-header-strip">
+            <div class="table-title-wrap">
+              <h3 class="table-heading">Underwritten Engagements</h3>
+              <span class="table-sub">Live platforms under execution and transformation</span>
+            </div>
+            <a href="error.html" class="table-export-btn">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Download Summary</span>
+            </a>
+          </div>
+
+          <div class="table-responsive-wrapper">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Platform Engagement</th>
+                  <th>Structure</th>
+                  <th>Enterprise Baseline</th>
+                  <th>Current Stage</th>
+                  <th>Lead Operating Partner</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="company-cell">
+                      <strong>Horizon Industrial ERP</strong>
+                      <span>Cloud Integration Phase</span>
+                    </div>
+                  </td>
+                  <td>Founder Recap</td>
+                  <td>$16.8M EBITDA</td>
+                  <td><span class="badge-status status-active">100-Day Plan</span></td>
+                  <td>Marcus Sterling</td>
+                  <td><a href="error.html" class="table-inline-btn">View Metrics</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="company-cell">
+                      <strong>Novus Intermodal Freight</strong>
+                      <span>Consolidation Program</span>
+                    </div>
+                  </td>
+                  <td>Add-on Infill</td>
+                  <td>$22.4M EBITDA</td>
+                  <td><span class="badge-status status-pending">Confirmatory QoE</span></td>
+                  <td>Alistair Ross</td>
+                  <td><a href="error.html" class="table-inline-btn">View Metrics</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="clientMandatesTab">
+        <div class="dash-panel-card reveal-item">
+          <div class="panel-header-row">
+            <div>
+              <h3 class="panel-title">Submitted Mandate Dossiers</h3>
+              <p class="panel-sub">Track status, NDA certifications, and evaluation milestones.</p>
+            </div>
+            <a href="error.html" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-plus"></i>
+              <span>New Submission</span>
+            </a>
+          </div>
+
+          <div class="panel-grid-stack">
+            <div class="panel-item-row">
+              <div class="item-primary-info">
+                <strong>Project Trident Supply Chain Buyout</strong>
+                <span>Ref: MND-2026-89 &bull; Submitted Aug 2026 &bull; Mutual NDA Fully Executed</span>
+              </div>
+              <span class="badge-status status-active">IC Underwriting</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Audit Dossier</a>
+            </div>
+
+            <div class="panel-item-row">
+              <div class="item-primary-info">
+                <strong>CoreMed Billing Software Bolt-On</strong>
+                <span>Ref: MND-2026-92 &bull; Submitted Sep 2026 &bull; Preliminary Dataroom Granted</span>
+              </div>
+              <span class="badge-status status-pending">Cleanroom Access</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Audit Dossier</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="clientDataroomTab">
+        <div class="dash-panel-card reveal-item">
+          <div class="panel-header-row">
+            <div>
+              <h3 class="panel-title">Bilateral Client Dataroom Vault</h3>
+              <p class="panel-sub">Encrypted access to underwritten models, audits, and closing documents.</p>
+            </div>
+            <a href="error.html" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-shield-halved"></i>
+              <span>Verify Access Key</span>
+            </a>
+          </div>
+
+          <div class="vault-files-grid">
+            <div class="vault-file-card">
+              <i class="fa-solid fa-file-pdf file-icon"></i>
+              <strong>Executed Bilateral NDA &bull; 2026.pdf</strong>
+              <span>Legal Fiduciary Archive &bull; 1.8 MB</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Download Decrypted</a>
+            </div>
+
+            <div class="vault-file-card">
+              <i class="fa-solid fa-file-excel file-icon"></i>
+              <strong>Working Capital Model &amp; EBITDA Bridge.xlsx</strong>
+              <span>Financial Architecture &bull; 9.4 MB</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Download Decrypted</a>
+            </div>
+
+            <div class="vault-file-card">
+              <i class="fa-solid fa-file-shield file-icon"></i>
+              <strong>Management Rollover Term Sheet.pdf</strong>
+              <span>Governance &amp; Vesting Schedule &bull; 3.2 MB</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Download Decrypted</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="clientTelemetryTab">
+        <div class="dash-panel-card reveal-item">
+          <div class="panel-header-row">
+            <div>
+              <h3 class="panel-title">Post-Acquisition Performance Benchmarks</h3>
+              <p class="panel-sub">Operational efficiency tracking against target underwriting models.</p>
+            </div>
+            <a href="error.html" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-chart-pie"></i>
+              <span>Full Analytics Deck</span>
+            </a>
+          </div>
+
+          <div class="panel-grid-stack">
+            <div class="panel-item-row">
+              <div class="item-primary-info">
+                <strong>ERP Centralization &amp; General Ledger Harmonization</strong>
+                <span>Target: 90 Days &bull; Realized: 76 Days (&minus;14 Days Ahead of Plan)</span>
+              </div>
+              <span class="badge-status status-realized">Completed</span>
+              <a href="error.html" class="table-inline-btn">View Log</a>
+            </div>
+
+            <div class="panel-item-row">
+              <div class="item-primary-info">
+                <strong>Gross Margin Optimization Across Procurement</strong>
+                <span>Target: +250 bps &bull; Realized: +290 bps (Exceeding Underwrite)</span>
+              </div>
+              <span class="badge-status status-active">On Track</span>
+              <a href="error.html" class="table-inline-btn">View Log</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="tab-panel" id="clientAdvisoryTab">
+        <div class="dash-panel-card reveal-item">
+          <div class="panel-header-row">
+            <div>
+              <h3 class="panel-title">Direct Operating Partner Advisory</h3>
+              <p class="panel-sub">Continuous board advisory, strategic M&amp;A support, and capital syndicate calls.</p>
+            </div>
+            <a href="error.html" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-calendar-check"></i>
+              <span>Schedule Strategic Call</span>
+            </a>
+          </div>
+
+          <div class="panel-grid-stack">
+            <div class="panel-item-row">
+              <div class="item-primary-info">
+                <strong>Marcus Sterling &bull; Senior Partner (Operations)</strong>
+                <span>Dedicated Advisor &bull; Next Bi-Weekly Review: Tuesday, 10:00 AM EST</span>
+              </div>
+              <span class="badge-status status-active">Direct Line Active</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Direct Message</a>
+            </div>
+
+            <div class="panel-item-row">
+              <div class="item-primary-info">
+                <strong>Victoria Chen &bull; Capital Markets Director</strong>
+                <span>Debt Syndication &bull; Available for Mezzanine Refinance Inquiries</span>
+              </div>
+              <span class="badge-status status-realized">Available</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Direct Message</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Elements
+  const hamburgerBtn = document.getElementById("dashHamburgerBtn");
+  const sidebar = document.getElementById("dashSidebar");
+  const sidebarClose = document.getElementById("dashSidebarClose");
+  const scrim = document.getElementById("dashSidebarScrim");
+  const sidebarEmailDisplay = document.getElementById("sidebarEmailDisplay");
+  const stageUserEmail = document.getElementById("stageUserEmail");
+  const logoutAnchor = document.getElementById("dashLogoutAnchor");
+  const navEntries = document.querySelectorAll(".sidebar-nav .nav-entry");
+  const tabPanels = document.querySelectorAll(".tab-panel");
+
+  // Read stored authentication email
+  const authenticatedEmail = localStorage.getItem("authenticatedUserEmail") || "principal@enterprise.com";
+  if (sidebarEmailDisplay) sidebarEmailDisplay.textContent = authenticatedEmail;
+  if (stageUserEmail) stageUserEmail.textContent = authenticatedEmail;
+
+  /* ------------------------------------------------------------------------
+     1. DRAWER TOGGLE & MOBILE BACKGROUND SCROLL-LOCK
+     ------------------------------------------------------------------------ */
+  function openDrawer() {
+    sidebar.classList.add("drawer-open");
+    hamburgerBtn.classList.add("is-active");
+    scrim.classList.add("is-visible");
+    document.body.classList.add("no-scroll"); // Prevents background scroll on mobile
+  }
+
+  function closeDrawer() {
+    sidebar.classList.remove("drawer-open");
+    hamburgerBtn.classList.remove("is-active");
+    scrim.classList.remove("is-visible");
+    document.body.classList.remove("no-scroll"); // Restores background scrolling
+  }
+
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener("click", () => {
+      if (sidebar.classList.contains("drawer-open")) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    });
+  }
+
+  if (sidebarClose) sidebarClose.addEventListener("click", closeDrawer);
+  if (scrim) {
+    scrim.addEventListener("click", closeDrawer);
+    // Prevent touch scrolling bleed on iOS/touch devices
+    scrim.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && sidebar.classList.contains("drawer-open")) {
+      closeDrawer();
+    }
+  });
+
+  /* ------------------------------------------------------------------------
+     2. DYNAMIC NAVIGATION TAB SWITCHING & CONTENT REVEAL
+     ------------------------------------------------------------------------ */
+  navEntries.forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetTabId = button.getAttribute("data-tab");
+
+      // Update sidebar active state
+      navEntries.forEach((b) => b.classList.remove("active"));
+      button.classList.add("active");
+
+      // Switch panels
+      tabPanels.forEach((panel) => {
+        if (panel.id === targetTabId) {
+          panel.classList.add("active");
+          // Re-trigger reveal animation
+          panel.querySelectorAll(".reveal-item").forEach((el) => {
+            el.style.animation = "none";
+            el.offsetHeight; /* trigger reflow */
+            el.style.animation = null;
+          });
+        } else {
+          panel.classList.remove("active");
+        }
+      });
+
+      // Close drawer automatically on mobile
+      if (window.innerWidth <= 768) {
+        closeDrawer();
+      }
+    });
+  });
+
+  /* ------------------------------------------------------------------------
+     3. SESSION LOGOUT HANDLER
+     ------------------------------------------------------------------------ */
+  if (logoutAnchor) {
+    logoutAnchor.addEventListener("click", () => {
+      localStorage.removeItem("authenticatedUserEmail");
+    });
+  }
+});
+
+  </script>
+</body>
+</html>

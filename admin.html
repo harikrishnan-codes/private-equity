@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Executive Terminal &bull; Stackly Capital</title>
+  <link rel="stylesheet" href="root.css"/>
+    <link rel="stylesheet" href="style.css"/>
+
+      <link rel="stylesheet" href="admin.css"/>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body class="dashboard-shell-body">
+
+  <!-- Mobile Top Bar -->
+  <header class="mobile-dash-header">
+    <button type="button" class="dash-hamburger-btn" id="dashHamburgerBtn" aria-label="Toggle Navigation Drawer">
+      <span class="bar bar-top"></span>
+      <span class="bar bar-mid"></span>
+      <span class="bar bar-bot"></span>
+    </button>
+    <a href="error.html" class="mobile-dash-brand">
+      <i class="fa-solid fa-layer-group brand-accent"></i>
+      <span>STACKLY</span>
+    </a>
+    <div class="mobile-security-dot" title="Encrypted Connection Active"></div>
+  </header>
+
+  <!-- Drawer Scrim Overlay -->
+  <div class="dash-sidebar-scrim" id="dashSidebarScrim"></div>
+
+  <div class="dash-core-layout">
+    
+    <!-- Left Navigation Drawer -->
+    <aside class="dash-sidebar" id="dashSidebar">
+      <div class="sidebar-brand-wrapper">
+        <a href="error.html" class="dash-logo">
+          <span class="logo-icon"><i class="fa-solid fa-layer-group"></i></span>
+          <span class="logo-text">STACKLY</span>
+        </a>
+        <button type="button" class="dash-sidebar-close" id="dashSidebarClose" aria-label="Close Navigation Drawer">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="sidebar-user-glance">
+        <div class="user-avatar-ring">
+          <i class="fa-solid fa-user-shield"></i>
+        </div>
+        <div class="user-glance-info">
+          <strong class="user-name">Committee Admin</strong>
+          <span class="user-email-display" id="sidebarEmailDisplay">operator@stackly.com</span>
+        </div>
+      </div>
+
+      <!-- Navigation Routing Links -->
+      <nav class="sidebar-nav">
+        <button type="button" class="nav-entry active" data-tab="overviewTab">
+          <i class="fa-solid fa-chart-pie"></i>
+          <span>Portfolio Overview</span>
+        </button>
+        <button type="button" class="nav-entry" data-tab="mandatesTab">
+          <i class="fa-solid fa-briefcase"></i>
+          <span>Direct Mandates</span>
+          <span class="nav-counter">14</span>
+        </button>
+        <button type="button" class="nav-entry" data-tab="diligenceTab">
+          <i class="fa-solid fa-file-shield"></i>
+          <span>Diligence Vault</span>
+        </button>
+        <button type="button" class="nav-entry" data-tab="syndicationsTab">
+          <i class="fa-solid fa-diagram-project"></i>
+          <span>LP Syndications</span>
+        </button>
+        <button type="button" class="nav-entry" data-tab="auditTab">
+          <i class="fa-solid fa-list-check"></i>
+          <span>Governance Audit</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-foot">
+        <a href="auth.html" class="dash-logout-anchor" id="dashLogoutAnchor">
+          <i class="fa-solid fa-arrow-right-from-bracket"></i>
+          <span>Terminate Session</span>
+        </a>
+      </div>
+    </aside>
+
+    <!-- Main Content Stage (Background: --bg-mint-soft: #DFF0E8) -->
+    <main class="dash-main-stage">
+      
+      <!-- Desktop Top Header -->
+      <div class="dash-stage-topbar reveal-item">
+        <div class="topbar-heading">
+          <span class="system-status-chip">
+            <span class="pulse-indicator"></span> System Protocol Normal
+          </span>
+          <h1 class="stage-title">Executive Investment Oversight</h1>
+        </div>
+        <div class="topbar-actions">
+          <a href="error.html" class="live-session-tag">
+            <span class="session-label">Session ID:</span>
+            <span class="session-val">STK-2026-908</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- User Session Verification Strip -->
+      <div class="dash-profile-banner reveal-item">
+        <div class="banner-text-col">
+          <span class="banner-badge">AUTHENTICATED OPERATOR SESSION</span>
+          <h2 class="banner-title" id="stageUserEmail">admin.operator@stackly.com</h2>
+          <p class="banner-sub">
+            Logged into Voting Investment Committee access. Bilateral 256-bit authentication token assigned.
+          </p>
+        </div>
+        <div class="banner-action-col">
+          <a href="error.html" class="btn btn-primary btn-sm">
+            <i class="fa-solid fa-plus"></i>
+            <span>Queue Mandate</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- =================================================================
+           TAB 1: PORTFOLIO OVERVIEW
+           ================================================================= -->
+      <section class="tab-panel active" id="overviewTab">
+        <!-- KPI Metric Grid -->
+        <div class="dash-metrics-grid">
+          <div class="metric-card reveal-item">
+            <span class="m-card-label">Cumulative Platform EV</span>
+            <div class="m-card-val-row">
+              <strong class="m-val">$3.1B+</strong>
+              <span class="m-trend positive">+18.4%</span>
+            </div>
+            <span class="m-card-footnote">Consolidated across 4 funds</span>
+          </div>
+
+          <div class="metric-card reveal-item">
+            <span class="m-card-label">Median Net Realized IRR</span>
+            <div class="m-card-val-row">
+              <strong class="m-val">38.4%</strong>
+              <span class="m-trend positive">+420 bps</span>
+            </div>
+            <span class="m-card-footnote">Above benchmark hurdles</span>
+          </div>
+
+          <div class="metric-card reveal-item">
+            <span class="m-card-label">Active Platform Assets</span>
+            <div class="m-card-val-row">
+              <strong class="m-val">14 Deals</strong>
+              <span class="m-trend neutral">4 Add-ons</span>
+            </div>
+            <span class="m-card-footnote">Under active transformation</span>
+          </div>
+
+          <div class="metric-card reveal-item">
+            <span class="m-card-label">Direct Review Queue</span>
+            <div class="m-card-val-row">
+              <strong class="m-val">3 Inbound</strong>
+              <span class="m-trend alert">&lt; 48h SLA</span>
+            </div>
+            <span class="m-card-footnote">Pending partner vote</span>
+          </div>
+        </div>
+
+        <!-- Pipeline Deployment Table -->
+        <div class="dash-table-chassis reveal-item">
+          <div class="table-header-strip">
+            <div class="table-title-wrap">
+              <h3 class="table-heading">Active Pipeline Deployments</h3>
+              <span class="table-sub">Mandates currently in confirmatory diligence</span>
+            </div>
+            <a href="error.html" class="table-export-btn">
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Export Dataroom</span>
+            </a>
+          </div>
+
+          <div class="table-responsive-wrapper">
+            <table class="dash-table">
+              <thead>
+                <tr>
+                  <th>Platform Asset</th>
+                  <th>Classification</th>
+                  <th>EBITDA Horizon</th>
+                  <th>Target Capital</th>
+                  <th>Status</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="company-cell">
+                      <strong>Synthex Cloud Solutions</strong>
+                      <span>Enterprise Software</span>
+                    </div>
+                  </td>
+                  <td>Founder Recap</td>
+                  <td>$18.4M</td>
+                  <td>$75M</td>
+                  <td><span class="badge-status status-active">Phase 2 Audit</span></td>
+                  <td><a href="error.html" class="table-inline-btn">Open File</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="company-cell">
+                      <strong>Vanguard Global Logistics</strong>
+                      <span>Intermodal Supply</span>
+                    </div>
+                  </td>
+                  <td>Platform Buyout</td>
+                  <td>$24.2M</td>
+                  <td>$95M</td>
+                  <td><span class="badge-status status-pending">IC Review</span></td>
+                  <td><a href="error.html" class="table-inline-btn">Open File</a></td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="company-cell">
+                      <strong>Kinetix Robotics</strong>
+                      <span>Industrial Tech</span>
+                    </div>
+                  </td>
+                  <td>Add-on Infill</td>
+                  <td>$8.6M</td>
+                  <td>$32M</td>
+                  <td><span class="badge-status status-realized">Realized</span></td>
+                  <td><a href="error.html" class="table-inline-btn">Open File</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           TAB 2: DIRECT MANDATES
+           ================================================================= -->
+      <section class="tab-panel" id="mandatesTab">
+        <div class="dash-panel-card reveal-item">
+          <div class="panel-header-row">
+            <div>
+              <h3 class="panel-title">Direct Mandate Submissions</h3>
+              <p class="panel-sub">Verified buy-side and proprietary infill opportunities awaiting assignment.</p>
+            </div>
+            <a href="error.html" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-filter"></i>
+              <span>Filter Targets</span>
+            </a>
+          </div>
+
+          <div class="panel-grid-stack">
+            <div class="panel-item-row">
+              <div class="item-primary-info">
+                <strong>Project Apex Intermodal</strong>
+                <span>Maritime container telemetry rollup &bull; $14M EBITDA</span>
+              </div>
+              <span class="badge-status status-pending">Underwriting</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Review Mandate</a>
+            </div>
+
+            <div class="panel-item-row">
+              <div class="item-primary-info">
+                <strong>BioCore Therapeutics ERP</strong>
+                <span>Clinical management add-on platform &bull; $9.2M EBITDA</span>
+              </div>
+              <span class="badge-status status-active">Confirmatory</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Review Mandate</a>
+            </div>
+
+            <div class="panel-item-row">
+              <div class="item-primary-info">
+                <strong>AeroForge Precision Metals</strong>
+                <span>Defense component casting buyout &bull; $22M EBITDA</span>
+              </div>
+              <span class="badge-status status-realized">Partner Approved</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Review Mandate</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           TAB 3: DILIGENCE VAULT
+           ================================================================= -->
+      <section class="tab-panel" id="diligenceTab">
+        <div class="dash-panel-card reveal-item">
+          <div class="panel-header-row">
+            <div>
+              <h3 class="panel-title">Encrypted Cleanroom Diligence Vault</h3>
+              <p class="panel-sub">Audited balance sheets, customer cohort analyses, and QoE reconciliations.</p>
+            </div>
+            <a href="error.html" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-cloud-arrow-up"></i>
+              <span>Upload Archive</span>
+            </a>
+          </div>
+
+          <div class="vault-files-grid">
+            <div class="vault-file-card">
+              <i class="fa-solid fa-file-pdf file-icon"></i>
+              <strong>Q3 Quality of Earnings Synthesis.pdf</strong>
+              <span>SOC2 Compartmentalized &bull; 8.4 MB</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Download Decrypted</a>
+            </div>
+
+            <div class="vault-file-card">
+              <i class="fa-solid fa-file-lines file-icon"></i>
+              <strong>Bolt-On Multiple Model v4.xlsx</strong>
+              <span>Deterministic Yield Framework &bull; 14.2 MB</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Download Decrypted</a>
+            </div>
+
+            <div class="vault-file-card">
+              <i class="fa-solid fa-file-shield file-icon"></i>
+              <strong>Bilateral Non-Disclosure Registers.pdf</strong>
+              <span>Legal Regulatory Compliance &bull; 2.1 MB</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Download Decrypted</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           TAB 4: LP SYNDICATIONS
+           ================================================================= -->
+      <section class="tab-panel" id="syndicationsTab">
+        <div class="dash-panel-card reveal-item">
+          <div class="panel-header-row">
+            <div>
+              <h3 class="panel-title">Institutional LP Syndication Tranches</h3>
+              <p class="panel-sub">Single-asset continuation vehicles and sovereign wealth co-investments.</p>
+            </div>
+            <a href="error.html" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-network-wired"></i>
+              <span>Structure Vehicle</span>
+            </a>
+          </div>
+
+          <div class="panel-grid-stack">
+            <div class="panel-item-row">
+              <div class="item-primary-info">
+                <strong>Stackly Co-Investment SPV IV (Cloud Platform)</strong>
+                <span>Target Ticket: $45M &bull; Subscribed: $41.5M (92%)</span>
+              </div>
+              <span class="badge-status status-active">Closing Tranche</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Allocation Ledger</a>
+            </div>
+
+            <div class="panel-item-row">
+              <div class="item-primary-info">
+                <strong>Continuation Fund Platform Alpha (Intermodal Hubs)</strong>
+                <span>Target Ticket: $85M &bull; Subscribed: $85M (100%)</span>
+              </div>
+              <span class="badge-status status-realized">Subscribed</span>
+              <a href="error.html" class="btn btn-secondary btn-sm">Allocation Ledger</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- =================================================================
+           TAB 5: GOVERNANCE AUDIT
+           ================================================================= -->
+      <section class="tab-panel" id="auditTab">
+        <div class="dash-panel-card reveal-item">
+          <div class="panel-header-row">
+            <div>
+              <h3 class="panel-title">Investment Committee Audit Trail</h3>
+              <p class="panel-sub">Immutable cryptographic log of partner affirmations, votes, and exits.</p>
+            </div>
+            <a href="error.html" class="btn btn-primary btn-sm">
+              <i class="fa-solid fa-stamp"></i>
+              <span>Export Audit Trail</span>
+            </a>
+          </div>
+
+          <div class="panel-grid-stack">
+            <div class="panel-item-row">
+              <div class="item-primary-info">
+                <strong>Affirmative Phase 2 Vote Executed: Synthex Cloud</strong>
+                <span>Authorized by Marcus Sterling, Chair &bull; 09:42 EST</span>
+              </div>
+              <span class="badge-status status-realized">Affirmed</span>
+              <a href="error.html" class="table-inline-btn">View Signature</a>
+            </div>
+
+            <div class="panel-item-row">
+              <div class="item-primary-info">
+                <strong>Valuation Threshold Adjusted: AeroForge</strong>
+                <span>Authorized by Alistair Ross &bull; 14:15 GMT</span>
+              </div>
+              <span class="badge-status status-pending">Revision Logged</span>
+              <a href="error.html" class="table-inline-btn">View Signature</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+
+document.addEventListener("DOMContentLoaded", () => {
+  // Elements
+  const hamburgerBtn = document.getElementById("dashHamburgerBtn");
+  const sidebar = document.getElementById("dashSidebar");
+  const sidebarClose = document.getElementById("dashSidebarClose");
+  const scrim = document.getElementById("dashSidebarScrim");
+  const sidebarEmailDisplay = document.getElementById("sidebarEmailDisplay");
+  const stageUserEmail = document.getElementById("stageUserEmail");
+  const logoutAnchor = document.getElementById("dashLogoutAnchor");
+  const navEntries = document.querySelectorAll(".sidebar-nav .nav-entry");
+  const tabPanels = document.querySelectorAll(".tab-panel");
+
+  // Authenticated Email Persistence
+  const authenticatedEmail = localStorage.getItem("authenticatedUserEmail") || "admin.operator@stackly.com";
+  if (sidebarEmailDisplay) sidebarEmailDisplay.textContent = authenticatedEmail;
+  if (stageUserEmail) stageUserEmail.textContent = authenticatedEmail;
+
+  /* ------------------------------------------------------------------------
+     1. DRAWER TOGGLE & MOBILE BACKGROUND SCROLL-LOCK
+     ------------------------------------------------------------------------ */
+  function openDrawer() {
+    sidebar.classList.add("drawer-open");
+    hamburgerBtn.classList.add("is-active");
+    scrim.classList.add("is-visible");
+    document.body.classList.add("no-scroll"); // Locks background scrolling
+  }
+
+  function closeDrawer() {
+    sidebar.classList.remove("drawer-open");
+    hamburgerBtn.classList.remove("is-active");
+    scrim.classList.remove("is-visible");
+    document.body.classList.remove("no-scroll"); // Restores background scrolling
+  }
+
+  if (hamburgerBtn) {
+    hamburgerBtn.addEventListener("click", () => {
+      if (sidebar.classList.contains("drawer-open")) {
+        closeDrawer();
+      } else {
+        openDrawer();
+      }
+    });
+  }
+
+  if (sidebarClose) sidebarClose.addEventListener("click", closeDrawer);
+  if (scrim) {
+    scrim.addEventListener("click", closeDrawer);
+    // Prevent background touch scrolling through scrim on mobile
+    scrim.addEventListener("touchmove", (e) => e.preventDefault(), { passive: false });
+  }
+
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && sidebar.classList.contains("drawer-open")) {
+      closeDrawer();
+    }
+  });
+
+  /* ------------------------------------------------------------------------
+     2. DYNAMIC NAVIGATION TAB SWITCHING & CONTENT REVEAL
+     ------------------------------------------------------------------------ */
+  navEntries.forEach((button) => {
+    button.addEventListener("click", () => {
+      const targetTabId = button.getAttribute("data-tab");
+
+      // Update sidebar active classes
+      navEntries.forEach((b) => b.classList.remove("active"));
+      button.classList.add("active");
+
+      // Switch tab panels
+      tabPanels.forEach((panel) => {
+        if (panel.id === targetTabId) {
+          panel.classList.add("active");
+          // Re-trigger reveal animation on tab change
+          panel.querySelectorAll(".reveal-item").forEach((el) => {
+            el.style.animation = "none";
+            el.offsetHeight; /* trigger reflow */
+            el.style.animation = null;
+          });
+        } else {
+          panel.classList.remove("active");
+        }
+      });
+
+      // Auto close drawer on mobile view after selecting link
+      if (window.innerWidth <= 768) {
+        closeDrawer();
+      }
+    });
+  });
+
+  /* ------------------------------------------------------------------------
+     3. SESSION LOGOUT HANDLER
+     ------------------------------------------------------------------------ */
+  if (logoutAnchor) {
+    logoutAnchor.addEventListener("click", () => {
+      localStorage.removeItem("authenticatedUserEmail");
+    });
+  }
+});
+
+  </script>
+</body>
+</html>
