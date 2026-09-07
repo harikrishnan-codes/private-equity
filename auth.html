@@ -16,37 +16,6 @@
 
 
 
- <!-- <div class="stackly-preloader" id="sitePreloader" aria-hidden="false">
-    <div class="preloader-backdrop"></div>
-    <div class="preloader-stage">
-         <div class="preloader-ring-wrapper">
-            <svg class="preloader-svg-orbit" viewBox="0 0 120 120">
-                <circle class="orbit-track" cx="60" cy="60" r="52"></circle>
-                <circle class="orbit-spin-outer" cx="60" cy="60" r="52"></circle>
-                <circle class="orbit-spin-inner" cx="60" cy="60" r="40"></circle>
-            </svg>
-             <div class="preloader-emblem">
-                <i class="fa-solid fa-layer-group"></i>
-            </div>
-        </div>
-
-         <div class="preloader-meta">
-            <span class="preloader-brand">STACKLY CAPITAL</span>
-            <div class="preloader-meter-line">
-                <div class="meter-bar" id="preloaderBar"></div>
-            </div>
-            <div class="preloader-telemetry">
-                <span class="telemetry-status" id="preloaderStatus">INITIALIZING HANDSHAKE</span>
-                <span class="telemetry-pct" id="preloaderPct">0%</span>
-            </div>
-        </div>
-    </div>
-</div> -->
-
-
-
-
-
 <body class="auth-body">
 
     <main class="auth-viewport-wrapper">
@@ -140,6 +109,22 @@
                 </div>
 
                 <form id="loginForm" novalidate>
+
+                    <div class="form-group">
+                        <label class="input-label">Account Role Designation</label>
+                        <div class="custom-role-segmented" id="signupRoleSelector">
+                            <button type="button" class="role-segment-btn active" data-role="client">
+                                <i class="fa-solid fa-user-tie"></i>
+                                <span>Client Principal</span>
+                            </button>
+                            <button type="button" class="role-segment-btn" data-role="admin">
+                                <i class="fa-solid fa-shield-halved"></i>
+                                <span>Committee Admin</span>
+                            </button>
+                        </div>
+                        <input type="hidden" id="signupRole" value="client" />
+                    </div>
+
                     <div class="form-group">
                         <label for="loginName" class="input-label">Authorized Principal Name</label>
                         <div class="input-control-shell">
