@@ -6,15 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portal Authentication &bull; Stackly Capital</title>
     <link rel="icon" href="./assets/logo.webp" />
-    <!-- <link rel="stylesheet" href="style.css" /> -->
     <link rel="stylesheet" href="root.css" />
     <link rel="stylesheet" href="auth.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
 </head>
-
-
-
-
 
 <body class="auth-body">
 
@@ -32,6 +27,7 @@
                 </a>
             </div>
 
+            <!-- 1. SIGNUP CARD (Create Account) -->
             <section class="auth-form-card" id="signupCard">
                 <div class="card-intro">
                     <h2 class="auth-title">Create Mandate Account</h2>
@@ -58,36 +54,30 @@
                         <label for="signupName" class="input-label">Legal Principal Name</label>
                         <div class="input-control-shell">
                             <i class="fa-regular fa-user field-icon"></i>
-                            <input type="text" id="signupName" class="input-field" placeholder="Marcus Sterling"
-                                autocomplete="off" />
+                            <input type="text" id="signupName" class="input-field" placeholder="Marcus Sterling" autocomplete="off" />
                         </div>
-                        <span class="input-error-tip" id="signupNameError">Only alphabets and spaces are
-                            permitted.</span>
+                        <span class="input-error-tip" id="signupNameError" style="display: none;">Only alphabets and spaces are permitted.</span>
                     </div>
 
                     <div class="form-group">
                         <label for="signupEmail" class="input-label">Institutional Email</label>
                         <div class="input-control-shell">
                             <i class="fa-regular fa-envelope field-icon"></i>
-                            <input type="email" id="signupEmail" class="input-field" placeholder="m.sterling@fund.com"
-                                autocomplete="off" />
+                            <input type="email" id="signupEmail" class="input-field" placeholder="m.sterling@fund.com" autocomplete="off" />
                         </div>
-                        <span class="input-error-tip" id="signupEmailError">Please enter a valid institutional email
-                            address.</span>
+                        <span class="input-error-tip" id="signupEmailError" style="display: none;">Please enter a valid institutional email address.</span>
                     </div>
 
                     <div class="form-group">
                         <label for="signupPass" class="input-label">Password Architecture</label>
                         <div class="input-control-shell">
                             <i class="fa-solid fa-lock field-icon"></i>
-                            <input type="password" id="signupPass" class="input-field password-input"
-                                placeholder="Min. 6 alphanumeric characters" autocomplete="off" />
+                            <input type="password" id="signupPass" class="input-field password-input" placeholder="Min. 6 alphanumeric characters" autocomplete="off" />
                             <button type="button" class="pass-toggle-btn" aria-label="Toggle password visibility">
                                 <i class="fa-regular fa-eye-slash"></i>
                             </button>
                         </div>
-                        <span class="input-error-tip" id="signupPassError">Password must be at least 6 characters
-                            long.</span>
+                        <span class="input-error-tip" id="signupPassError" style="display: none;">Password must be at least 6 characters long.</span>
                     </div>
 
                     <button type="submit" class="btn btn-auth-action">
@@ -102,6 +92,7 @@
                 </div>
             </section>
 
+            <!-- 2. LOGIN CARD -->
             <section class="auth-form-card auth-card-hidden" id="loginCard">
                 <div class="card-intro">
                     <h2 class="auth-title">Mandate Gateway Sign In</h2>
@@ -109,10 +100,9 @@
                 </div>
 
                 <form id="loginForm" novalidate>
-
                     <div class="form-group">
                         <label class="input-label">Account Role Designation</label>
-                        <div class="custom-role-segmented" id="signupRoleSelector">
+                        <div class="custom-role-segmented" id="loginRoleSelector">
                             <button type="button" class="role-segment-btn active" data-role="client">
                                 <i class="fa-solid fa-user-tie"></i>
                                 <span>Client Principal</span>
@@ -122,29 +112,25 @@
                                 <span>Committee Admin</span>
                             </button>
                         </div>
-                        <input type="hidden" id="signupRole" value="client" />
+                        <input type="hidden" id="loginRole" value="client" />
                     </div>
 
                     <div class="form-group">
                         <label for="loginName" class="input-label">Authorized Principal Name</label>
                         <div class="input-control-shell">
                             <i class="fa-regular fa-user field-icon"></i>
-                            <input type="text" id="loginName" class="input-field" placeholder="Marcus Sterling"
-                                autocomplete="off" />
+                            <input type="text" id="loginName" class="input-field" placeholder="Marcus Sterling" autocomplete="off" />
                         </div>
-                        <span class="input-error-tip" id="loginNameError">Only alphabets and spaces are
-                            permitted.</span>
+                        <span class="input-error-tip" id="loginNameError" style="display: none;">Only alphabets and spaces are permitted.</span>
                     </div>
 
                     <div class="form-group">
                         <label for="loginEmail" class="input-label">Institutional Email</label>
                         <div class="input-control-shell">
                             <i class="fa-regular fa-envelope field-icon"></i>
-                            <input type="email" id="loginEmail" class="input-field" placeholder="m.sterling@fund.com"
-                                autocomplete="off" />
+                            <input type="email" id="loginEmail" class="input-field" placeholder="m.sterling@fund.com" autocomplete="off" />
                         </div>
-                        <span class="input-error-tip" id="loginEmailError">Please enter a valid institutional email
-                            address.</span>
+                        <span class="input-error-tip" id="loginEmailError" style="display: none;">Please enter a valid institutional email address.</span>
                     </div>
 
                     <div class="form-group">
@@ -154,14 +140,12 @@
                         </div>
                         <div class="input-control-shell">
                             <i class="fa-solid fa-lock field-icon"></i>
-                            <input type="password" id="loginPass" class="input-field password-input"
-                                placeholder="Enter key (Min. 6 chars)" autocomplete="off" />
+                            <input type="password" id="loginPass" class="input-field password-input" placeholder="Enter key (Min. 6 chars)" autocomplete="off" />
                             <button type="button" class="pass-toggle-btn" aria-label="Toggle password visibility">
                                 <i class="fa-regular fa-eye-slash"></i>
                             </button>
                         </div>
-                        <span class="input-error-tip" id="loginPassError">Security key must contain at least 6
-                            characters.</span>
+                        <span class="input-error-tip" id="loginPassError" style="display: none;">Security key must contain at least 6 characters.</span>
                     </div>
 
                     <button type="submit" class="btn btn-auth-action">
@@ -176,6 +160,7 @@
                 </div>
             </section>
 
+            <!-- 3. FORGOT PASSWORD CARD -->
             <section class="auth-form-card auth-card-hidden" id="forgotCard">
                 <div class="card-intro">
                     <h2 class="auth-title">Key Recovery Protocol</h2>
@@ -187,11 +172,9 @@
                         <label for="forgotEmail" class="input-label">Registered Institutional Email</label>
                         <div class="input-control-shell">
                             <i class="fa-regular fa-envelope field-icon"></i>
-                            <input type="email" id="forgotEmail" class="input-field" placeholder="m.sterling@fund.com"
-                                autocomplete="off" />
+                            <input type="email" id="forgotEmail" class="input-field" placeholder="m.sterling@fund.com" autocomplete="off" />
                         </div>
-                        <span class="input-error-tip" id="forgotEmailError">Please enter a valid email format to
-                            proceed.</span>
+                        <span class="input-error-tip" id="forgotEmailError" style="display: none;">Please enter a valid email format to proceed.</span>
                     </div>
 
                     <button type="submit" class="btn btn-auth-action">
@@ -209,22 +192,19 @@
         </div>
     </main>
 
-    <script src="auth.js"></script>
     <script>
-
         document.addEventListener("DOMContentLoaded", () => {
             // View Containers
             const signupCard = document.getElementById("signupCard");
             const loginCard = document.getElementById("loginCard");
             const forgotCard = document.getElementById("forgotCard");
 
-            // Navigation Trigger Buttons
+            // Navigation Switch Buttons
             const toLoginBtn = document.getElementById("toLoginBtn");
             const toSignupBtn = document.getElementById("toSignupBtn");
             const toForgotBtn = document.getElementById("toForgotBtn");
             const backToLoginBtn = document.getElementById("backToLoginBtn");
 
-            // Switch View Controller
             function switchView(targetCard) {
                 [signupCard, loginCard, forgotCard].forEach((card) => {
                     card.classList.add("auth-card-hidden");
@@ -237,7 +217,7 @@
             toForgotBtn?.addEventListener("click", () => switchView(forgotCard));
             backToLoginBtn?.addEventListener("click", () => switchView(loginCard));
 
-            // Eye Icon Password Toggle (Applies to all password inputs)
+            // Password Toggle Handlers
             const passToggleButtons = document.querySelectorAll(".pass-toggle-btn");
             passToggleButtons.forEach((btn) => {
                 btn.addEventListener("click", () => {
@@ -257,21 +237,41 @@
                 });
             });
 
-            // Custom Role Segment Switcher (Avoids <select>)
-            const roleButtons = document.querySelectorAll(".role-segment-btn");
-            const roleHiddenInput = document.getElementById("signupRole");
+            // Segmented Role Switcher Controller
+            function setSegmentRole(containerId, hiddenInputId, targetRole) {
+                const container = document.getElementById(containerId);
+                const hiddenInput = document.getElementById(hiddenInputId);
+                if (!container || !hiddenInput) return;
 
-            roleButtons.forEach((btn) => {
-                btn.addEventListener("click", () => {
-                    roleButtons.forEach((b) => b.classList.remove("active"));
-                    btn.classList.add("active");
-                    if (roleHiddenInput) {
-                        roleHiddenInput.value = btn.getAttribute("data-role");
+                const buttons = container.querySelectorAll(".role-segment-btn");
+                buttons.forEach((btn) => {
+                    if (btn.getAttribute("data-role") === targetRole) {
+                        btn.classList.add("active");
+                    } else {
+                        btn.classList.remove("active");
                     }
                 });
-            });
+                hiddenInput.value = targetRole;
+            }
 
-            // Validation Rules
+            function setupSegmentListeners(containerId, hiddenInputId) {
+                const container = document.getElementById(containerId);
+                const hiddenInput = document.getElementById(hiddenInputId);
+                if (!container || !hiddenInput) return;
+
+                const buttons = container.querySelectorAll(".role-segment-btn");
+                buttons.forEach((btn) => {
+                    btn.addEventListener("click", () => {
+                        const role = btn.getAttribute("data-role");
+                        setSegmentRole(containerId, hiddenInputId, role);
+                    });
+                });
+            }
+
+            setupSegmentListeners("signupRoleSelector", "signupRole");
+            setupSegmentListeners("loginRoleSelector", "loginRole");
+
+            // Validation Helper Functions
             const nameRegex = /^[A-Za-z\s]+$/;
             const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
@@ -287,7 +287,6 @@
                 }
             }
 
-            // Bind real-time input error removal
             function bindLiveClear(input, errorEl) {
                 if (!input) return;
                 input.addEventListener("input", () => {
@@ -297,12 +296,13 @@
             }
 
             /* ------------------------------------------------------------------------
-               1. SIGNUP VALIDATION
-               ------------------------------------------------------------------------ */
+               1. CREATE ACCOUNT (Signup -> Save Role -> Redirect to Login View)
+            ------------------------------------------------------------------------ */
             const signupForm = document.getElementById("signupForm");
             const signupName = document.getElementById("signupName");
             const signupEmail = document.getElementById("signupEmail");
             const signupPass = document.getElementById("signupPass");
+            const signupRole = document.getElementById("signupRole");
 
             bindLiveClear(signupName, document.getElementById("signupNameError"));
             bindLiveClear(signupEmail, document.getElementById("signupEmailError"));
@@ -314,7 +314,7 @@
                 const nameVal = signupName.value.trim();
                 const emailVal = signupEmail.value.trim();
                 const passVal = signupPass.value.trim();
-                const roleVal = roleHiddenInput ? roleHiddenInput.value : "client";
+                const chosenRole = signupRole ? signupRole.value : "client";
 
                 const isNameValid = validateInput(
                     signupName,
@@ -335,87 +335,95 @@
                 );
 
                 if (isNameValid && isEmailValid && isPassValid) {
-                    // Store registered profile in localStorage for validation & dashboard routing
+                    // Persist account credentials along with designated role
                     const userProfile = {
                         name: nameVal,
                         email: emailVal,
                         password: passVal,
-                        role: roleVal
+                        role: chosenRole
                     };
                     localStorage.setItem("registeredUserProfile", JSON.stringify(userProfile));
 
-                    // Clear input fields automatically
+                    // Synchronize the Login card with the registered role & email
+                    setSegmentRole("loginRoleSelector", "loginRole", chosenRole);
+                    const loginName = document.getElementById("loginName");
+                    const loginEmail = document.getElementById("loginEmail");
+                    if (loginName) loginName.value = nameVal;
+                    if (loginEmail) loginEmail.value = emailVal;
+
+                    // Clear signup input fields
                     signupName.value = "";
                     signupEmail.value = "";
                     signupPass.value = "";
 
-                    // Switch to Login card
+                    // Redirect view to Login section
                     switchView(loginCard);
                 }
             });
 
             /* ------------------------------------------------------------------------
-               2. LOGIN VALIDATION & CONDITIONAL DASHBOARD ROUTING
-               ------------------------------------------------------------------------ */
+               2. LOGIN (Login Card -> Validate -> Redirect to Respective Dashboard)
+            ------------------------------------------------------------------------ */
             const loginForm = document.getElementById("loginForm");
             const loginName = document.getElementById("loginName");
             const loginEmail = document.getElementById("loginEmail");
             const loginPass = document.getElementById("loginPass");
+            const loginRole = document.getElementById("loginRole");
 
             bindLiveClear(loginName, document.getElementById("loginNameError"));
             bindLiveClear(loginEmail, document.getElementById("loginEmailError"));
             bindLiveClear(loginPass, document.getElementById("loginPassError"));
 
             loginForm?.addEventListener("submit", (e) => {
-                e.preventDefault();
+    e.preventDefault();
 
-                const nameVal = loginName.value.trim();
-                const emailVal = loginEmail.value.trim();
-                const passVal = loginPass.value.trim();
+    const nameVal = loginName.value.trim();
+    const emailVal = loginEmail.value.trim();
+    const passVal = loginPass.value.trim();
+    const currentSelectedRole = loginRole ? loginRole.value : "client";
 
-                const isNameValid = validateInput(
-                    loginName,
-                    document.getElementById("loginNameError"),
-                    nameVal !== "" && nameRegex.test(nameVal)
-                );
+    const isNameValid = validateInput(
+        loginName,
+        document.getElementById("loginNameError"),
+        nameVal !== "" && nameRegex.test(nameVal)
+    );
 
-                const isEmailValid = validateInput(
-                    loginEmail,
-                    document.getElementById("loginEmailError"),
-                    emailVal !== "" && emailRegex.test(emailVal)
-                );
+    const isEmailValid = validateInput(
+        loginEmail,
+        document.getElementById("loginEmailError"),
+        emailVal !== "" && emailRegex.test(emailVal)
+    );
 
-                const isPassValid = validateInput(
-                    loginPass,
-                    document.getElementById("loginPassError"),
-                    passVal.length >= 6
-                );
+    const isPassValid = validateInput(
+        loginPass,
+        document.getElementById("loginPassError"),
+        passVal.length >= 6
+    );
 
-                if (isNameValid && isEmailValid && isPassValid) {
-                    // Check stored user profile from signup, or evaluate based on input
-                    const savedProfile = JSON.parse(localStorage.getItem("registeredUserProfile") || "{}");
-                    const assignedRole = savedProfile.role || (emailVal.toLowerCase().includes("admin") ? "admin" : "client");
+    if (isNameValid && isEmailValid && isPassValid) {
+        // லாகின் பக்கத்தில் தேர்வு செய்த ரோலை நேரடியாக எடுத்துக்கொள்ளும்
+        const targetRole = currentSelectedRole;
 
-                    // Save active session email to display on dashboard
-                    localStorage.setItem("authenticatedUserEmail", emailVal);
+        // லாகின் செய்த மின்னஞ்சலைச் சேமித்தல்
+        localStorage.setItem("authenticatedUserEmail", emailVal);
 
-                    // Clear input fields automatically
-                    loginName.value = "";
-                    loginEmail.value = "";
-                    loginPass.value = "";
+        // படிவத்தை காலி செய்தல்
+        loginName.value = "";
+        loginEmail.value = "";
+        loginPass.value = "";
 
-                    // Route to chosen role dashboard
-                    if (assignedRole === "admin") {
-                        window.location.href = "admin.html";
-                    } else {
-                        window.location.href = "user.html";
-                    }
-                }
-            });
+        // சரியான பக்கத்திற்குத் திருப்பிவிடுதல்
+        if (targetRole === "admin") {
+            window.location.href = "admin.html";
+        } else {
+            window.location.href = "user.html";
+        }
+    }
+});
 
             /* ------------------------------------------------------------------------
-               3. FORGOT PASSWORD VALIDATION & REDIRECT TO ERROR.HTML
-               ------------------------------------------------------------------------ */
+               3. FORGOT PASSWORD PROTOCOL
+            ------------------------------------------------------------------------ */
             const forgotForm = document.getElementById("forgotForm");
             const forgotEmail = document.getElementById("forgotEmail");
 
@@ -432,57 +440,12 @@
                 );
 
                 if (isEmailValid) {
-                    // Clear inputs automatically
                     forgotEmail.value = "";
-
-                    // Redirect to existing error.html page
                     window.location.href = "error.html";
                 }
             });
         });
-
-
-
-
-
-
-        // Replace the redirect block in auth.js with this:
-        if (isNameValid && isEmailValid && isPassValid) {
-            const savedProfile = JSON.parse(localStorage.getItem("registeredUserProfile") || "{}");
-
-            // Determine role:
-            // 1. If email contains 'admin', treat as admin
-            // 2. Otherwise, check if this email matches the registered profile's role
-            let targetRole = "client";
-
-            if (emailVal.toLowerCase().includes("admin")) {
-                targetRole = "admin";
-            } else if (savedProfile.email && savedProfile.email.toLowerCase() === emailVal.toLowerCase()) {
-                targetRole = savedProfile.role || "client";
-            }
-
-            // Store active user email for dashboard display
-            localStorage.setItem("authenticatedUserEmail", emailVal);
-
-            // Clear inputs
-            loginName.value = "";
-            loginEmail.value = "";
-            loginPass.value = "";
-
-            // Redirect
-            if (targetRole === "admin") {
-                window.location.href = "admin-dashboard.html";
-            } else {
-                window.location.href = "client-dashboard.html";
-            }
-        }
-
-
-
-
-
     </script>
-
 </body>
 
 </html>
