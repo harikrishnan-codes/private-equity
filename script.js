@@ -598,3 +598,69 @@ if (document.querySelector(".final-cta-card") && typeof ScrollTrigger !== "undef
     }
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Universal Fiduciary Preloader Controller
+document.addEventListener("DOMContentLoaded", () => {
+  const preloader = document.getElementById("sitePreloader");
+  const meterBar = document.getElementById("preloaderBar");
+  const pctText = document.getElementById("preloaderPct");
+  const statusText = document.getElementById("preloaderStatus");
+
+  if (!preloader) return;
+
+  // Prevent user interaction while loading
+  document.body.style.overflow = "hidden";
+
+  let progress = 0;
+  const statusSteps = [
+    { at: 25, label: "ESTABLISHING TLS TUNNEL" },
+    { at: 60, label: "PARSING COMPLIANCE DOSSIER" },
+    { at: 85, label: "AUTHORIZING CREDENTIALS" },
+    { at: 100, label: "ENCRYPTED PORTAL READY" }
+  ];
+
+  // Increment simulated progress
+  const interval = setInterval(() => {
+    progress += Math.floor(Math.random() * 9) + 4;
+
+    if (progress > 95) progress = 95; // Wait for window.onload for final 100%
+
+    updateUI(progress);
+  }, 45);
+
+  function updateUI(val) {
+    if (meterBar) meterBar.style.width = `${val}%`;
+    if (pctText) pctText.textContent = `${val}%`;
+
+    const currentStep = statusSteps.find((s) => val <= s.at);
+    if (currentStep && statusText) {
+      statusText.textContent = currentStep.label;
+    }
+  }
+
+  // Final release once whole DOM & assets complete
+  window.addEventListener("load", () => {
+    clearInterval(interval);
+    updateUI(100);
+
+    setTimeout(() => {
+      preloader.classList.add("preloader-loaded");
+      document.body.style.overflow = "";
+    }, 500);
+  });
+});
